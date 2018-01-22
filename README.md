@@ -28,7 +28,7 @@ This project requires certain pieces of software to run. Below is hte list and r
 1. java -version
 1. The version should be displayed
 
-## *[Install Gradle] (https://gradle.org)*
+## *[Install Gradle](https://gradle.org)*
 Install
 
 1. Open a terminal
