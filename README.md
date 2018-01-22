@@ -6,7 +6,10 @@ The Item Ingest Service is reponsible for ingesting the item data created by the
 
 This project requires certain pieces of software to run. Below is hte list and recommended order to install those pieces of software.  
 
-## *[Install Homebrew] (https://brew.sh/)*
+## Install Homebrew 
+[Homebrew Site](https://brew.sh/)
+
+*Install*
 
 1. Open a terminal
 2. `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)`
@@ -17,7 +20,7 @@ This project requires certain pieces of software to run. Below is hte list and r
 1. brew -v
 1. The version should be displayed
 
-## [Install Java 8 SE Development Kit] (https://java.com)
+## Install Java 8 SE Development Kit 
 
 1. Download installer from [here](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 1. Run the installer
@@ -28,8 +31,10 @@ This project requires certain pieces of software to run. Below is hte list and r
 1. java -version
 1. The version should be displayed
 
-## *[Install Gradle](https://gradle.org)*
-Install
+## Install Gradle
+[Gradle](https://gradle.org)
+
+*Install*
 
 1. Open a terminal
 1. brew install gradle
