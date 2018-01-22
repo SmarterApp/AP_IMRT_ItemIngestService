@@ -66,5 +66,9 @@ tasks.withType(FindBugs) {
     }
 }
 
-// Make sure to always run the jacoco coverage report
-test.finalizedBy jacocoTestReport
+/**
+ * Unit Testing task, to avoid running slower integration tests
+ */
+task unitTest (type: Test) {
+    exclude '**/*IntegrationTest.class'
+}
