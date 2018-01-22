@@ -6,13 +6,13 @@ The Item Ingest Service is reponsible for ingesting the item data created by the
 
 This project requires certain pieces of software to run. Below is hte list and recommended order to install those pieces of software.  
 
-* [Getting Started For Mac](getting_started_mac.md)
+* [Getting Started For Mac](documentation/getting_started_mac.md)
 
 
-##Configure global Gradle properties
+## Configure global Gradle properties
 
-Create "~/.gradle/gradle.properties" if it doesn't already exist
-Edit "~/.gradle/gradle.properties", paste these contents into the file:
+Create `~/.gradle/gradle.properties` if it doesn't already exist
+Edit `~/.gradle/gradle.properties`, paste these contents into the file:
 
 ```
 # Your dockerhub user, password, and email
