@@ -32,4 +32,22 @@ artifactoryUser=<artifactory User>
 artifactoryPassword=<ask smarterbalanced>
 ```
 
+## Building with Gradle
+<pre>./gradlew build</pre>
+The standard gradle "build" target will build the source code, run findbugs, and run all unit and integration tests.
+If findbugs discovers any issues, the build will fail.
 
+<pre>./gradlew jacocoTestReport</pre>
+The JaCoCo plugin is enabled, so if you want to generate code coverage reports, just run the standard "jacocoTestReport" gradle task
+
+
+Test, findbugs, and code coverage reports will be generated in the default location:
+<pre>.projectDir/build/reports</pre>
+
+During development, you may wish to run just unit tests, rather than the full suite of unit and integration tests. There is a gradle task "unitTest" configured for that. 
+To support this, all integration tests must follow the naming convention XxxIntegrationTest.java
+<pre>./gradlew unitTest</pre>
+
+Finally, to disable findbugs, you must use the '-x' argument to gradle to prevent the 2 findbugs tasks from running, for example:
+
+<pre>./gradlew build -x findBugsMain -x findBugsTest</pre>
