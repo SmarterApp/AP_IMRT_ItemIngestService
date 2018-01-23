@@ -47,3 +47,7 @@ Test, findbugs, and code coverage reports will be generated in the default locat
 During development, you may wish to run just unit tests, rather than the full suite of unit and integration tests. There is a gradle task "unitTest" configured for that. 
 To support this, all integration tests must follow the naming convention XxxIntegrationTest.java
 <pre>./gradlew unitTest</pre>
+
+Finally, to disable findbugs, you must use the '-x' argument to gradle to prevent the 2 findbugs tasks from running, for example:
+
+<pre>./gradlew build -x findBugsMain -x findBugsTest</pre>
