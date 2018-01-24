@@ -3,6 +3,7 @@ import java.text.SimpleDateFormat
 buildscript {
     repositories {
         mavenCentral()
+        jcenter()
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.9.RELEASE")
@@ -14,6 +15,8 @@ plugins {
     id 'findbugs'
     id 'org.springframework.boot' version '1.5.9.RELEASE'
     id 'jacoco'
+    id 'com.jfrog.artifactory' version '4.4.14'
+    id 'com.bmuschko.clover' version '2.2.0'
 }
 
 repositories {
@@ -26,6 +29,7 @@ targetCompatibility = 1.8
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.springframework.boot:spring-boot-starter-actuator'
+    clover 'org.openclover:clover:4.2.0'
     testCompile 'org.springframework.boot:spring-boot-starter-test'
 }
 
