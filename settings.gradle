@@ -1,0 +1,3 @@
+// Need to set this to set the project name, which is in turn used as the maven artifactId when we publish to artifactory
+// This cannot be set in gradle.properties
+rootProject.name = "ap-imrt-iis"
