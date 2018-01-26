@@ -118,3 +118,12 @@ artifactory {
 }
 
 tasks.artifactoryPublish.dependsOn build
+
+/**
+ * Clover configuration
+ */
+clover {
+    report {
+        html = true
+    }
+}
