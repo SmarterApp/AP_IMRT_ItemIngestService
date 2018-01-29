@@ -1,0 +1,13 @@
+version: '3'
+services:
+    ap-imrt-iis-service:
+        container_name: ap-imrt-iis-service
+        image: @dockerTagBase@/ap-imrt-iis:@version@
+        healthcheck:
+          test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+          interval: 30s
+          timeout: 5s
+          retries: 3
+        ports:
+            - 8080:8080
+

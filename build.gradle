@@ -1,4 +1,8 @@
 import java.text.SimpleDateFormat
+import com.bmuschko.gradle.docker.tasks.image.DockerBuildImage
+import com.bmuschko.gradle.docker.tasks.image.DockerPushImage
+import com.bmuschko.gradle.docker.tasks.image.DockerRemoveImage
+import org.apache.tools.ant.filters.ReplaceTokens
 
 buildscript {
     repositories {
@@ -19,6 +23,7 @@ plugins {
     id 'maven-publish'
     id 'com.jfrog.artifactory' version '4.4.14'
     id 'com.bmuschko.clover' version '2.2.0'
+    id 'com.bmuschko.docker-remote-api' version '3.2.3'
 }
 apply plugin: 'io.github.robwin.jgitflow'
 
@@ -126,4 +131,45 @@ clover {
     report {
         html = true
     }
+}
+
+/***************************
+ * docker
+ ***************************/
+
+docker {
+    registryCredentials {
+        username = dockerHubUser
+        password = dockerHubPassword
+        email = dockerHubEmail
+    }
+}
+
+task dockerCopyFiles(type: Copy) {
+    dependsOn 'bootRepackage'
+
+    from('src/main/docker/') {
+        filter(ReplaceTokens, tokens: [version                    : project.version,
+                                       dockerTagBase              : project.dockerTagBase])
+    }
+
+    from("build/libs/${jar.archiveName}") {
+    }
+
+    into 'build/docker'
+}
+
+task dockerBuildImage(type: DockerBuildImage) {
+    dependsOn 'dockerCopyFiles'
+    inputDir = project.file('build/docker/')
+    tag = "${dockerTagBase}/${jar.baseName}:${version}"
+}
+
+task dockerPushImage(type: DockerPushImage) {
+    dependsOn 'dockerBuildImage'
+    imageName = "${dockerTagBase}/${jar.baseName}:${version}"
+}
+
+task dockerRemoveImage(type: DockerRemoveImage) {
+    imageId = "${project.dockerTagBase}/${jar.baseName}:${project.version}"
 }

@@ -51,3 +51,15 @@ To support this, all integration tests must follow the naming convention XxxInte
 Finally, to disable findbugs, you must use the '-x' argument to gradle to prevent the 2 findbugs tasks from running, for example:
 
 <pre>./gradlew build -x findBugsMain -x findBugsTest</pre>
+
+## Docker Support
+The project uses the [https://github.com/bmuschko/gradle-docker-plugin] to provide docker support.
+
+To build the docker image locally, run
+<pre>./gradlew dockerBuildImage</pre>
+
+To run the docker image locally, run
+<pre>
+cd build/docker
+docker-compose up
+</pre>
