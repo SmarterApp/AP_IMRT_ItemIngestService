@@ -63,3 +63,23 @@ To run the docker image locally, run
 cd build/docker
 docker-compose up
 </pre>
+
+As well as standing up the IMRT IIS service, docker-compose up will also bring up a Spring Cloud Configuration Service.
+This service is configured to look in the directory $USER_HOME/sbac/imrt-config-repo for a git based configuration.
+For example:
+
+<pre>
+mkdir -p ~/sbac/imrt-config-repo
+cd ~/sbac/imrt-config-repo
+git init
+echo 'test.config="Test Config" > ap-imrt-iis.properties
+git add .
+git commit
+</pre>
+
+Once the application is running, you can hit the "testConfig" endpoint to verify the configuration service is running
+
+<pre>
+curl http://localhost:8080/testConfig
+"Test Config"
+</pre>

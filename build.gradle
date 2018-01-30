@@ -37,9 +37,19 @@ targetCompatibility = 1.8
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.springframework.boot:spring-boot-starter-actuator'
+    compile 'org.springframework.cloud:spring-cloud-starter-config'
+    compile 'org.springframework.boot:spring-boot-starter-aop'
+    compile 'org.springframework.retry:spring-retry'
     clover 'org.openclover:clover:4.2.0'
     testCompile 'org.springframework.boot:spring-boot-starter-test'
 }
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:Edgware.RELEASE"
+    }
+}
+
 
 /***************************
  * build information
@@ -149,7 +159,9 @@ task dockerCopyFiles(type: Copy) {
     dependsOn 'bootRepackage'
 
     from('src/main/docker/') {
-        filter(ReplaceTokens, tokens: [version                    : project.version,
+        filter(ReplaceTokens, tokens: [USER_HOME                  : System.env.HOME,
+                                       configServerVersion        : project.configServerVersion,
+                                       version                    : project.version,
                                        dockerTagBase              : project.dockerTagBase])
     }
 
