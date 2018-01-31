@@ -1,5 +1,27 @@
 version: '3'
 services:
+    configuration-service:
+        container_name: configuration-service
+        image: @dockerTagBase@/configuration-service:@configServerVersion@
+        healthcheck:
+          test: ["CMD", "curl", "-f", "http://localhost:8888/health"]
+          interval: 30s
+          timeout: 5s
+          retries: 3
+        environment:
+          CONFIG_SERVICE_REPO: "file://tmp"
+          SPRING_CLOUD_BUS_ENABLED: "false"
+          MANAGEMENT_HEALTH_RABBIT_ENABLED: "false"
+        expose:
+            - 8888
+        ports:
+            - 8888:8888
+        networks:
+            - spring-cloud-network
+        volumes:
+            - @USER_HOME@/sbac/imrt-config-repo:/tmp
+        logging:
+            driver: json-file
     ap-imrt-iis-service:
         container_name: ap-imrt-iis-service
         image: @dockerTagBase@/ap-imrt-iis:@version@
@@ -8,6 +30,22 @@ services:
           interval: 30s
           timeout: 5s
           retries: 3
+        environment:
+            CONFIG_SERVICE_ENABLED: "true"
+            CONFIG_SERVICE_URL: "http://configuration-service:8888"
+            SPRING_PROFILES_ACTIVE: "localcompose"
         ports:
             - 8080:8080
+        networks:
+            - spring-cloud-network
+        links:
+            - configuration-service
+        depends_on:
+            - configuration-service
+        logging:
+            driver: json-file
+
+networks:
+    spring-cloud-network:
+        driver: bridge
 
