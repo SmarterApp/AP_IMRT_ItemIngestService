@@ -185,3 +185,17 @@ task dockerPushImage(type: DockerPushImage) {
 task dockerRemoveImage(type: DockerRemoveImage) {
     imageId = "${project.dockerTagBase}/${jar.baseName}:${project.version}"
 }
+
+/**
+ * Kubernetes
+ */
+task setDevKopsConfig(type: Exec) {
+    executable = 'kops'
+    args = ['export', 'kubecfg', '--state', "${project.kubecfgState}", '--name', "${project.kubecfgDevName}"]
+}
+
+task updateDevKops(type: Exec) {
+    dependsOn 'setDevKopsConfig'
+    executable = 'kubectl'
+    args = ['set', 'image', 'deployment/ap-imrt-iis-deployment', "ap-imrt-iis=${project.dockerTagBase}/ap-imrt-iis:${project.version}"]
+}
