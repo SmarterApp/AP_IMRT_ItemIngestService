@@ -1,0 +1,7 @@
+test:
+  # Used to conditionally create certain beans during testing
+  enabled: true
+logging:
+  level:
+    org.opentestsystem: DEBUG
+    org.gitlab4j: DEBUG

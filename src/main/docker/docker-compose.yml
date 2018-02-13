@@ -33,7 +33,12 @@ services:
         environment:
             CONFIG_SERVICE_ENABLED: "true"
             CONFIG_SERVICE_URL: "http://configuration-service:8888"
-            SPRING_PROFILES_ACTIVE: "localcompose"
+            # Empty values are taken from the host environment
+            GITLAB_HOST:
+            GITLAB_ACCESS_TOKEN:
+            GITLAB_GROUP:
+            GITLAB_WEBHOOK_URL:
+
         ports:
             - 8080:8080
         networks:
