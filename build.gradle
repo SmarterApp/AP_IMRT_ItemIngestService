@@ -200,7 +200,7 @@ task setDevKopsConfig(type: Exec) {
 }
 
 task setDevKopsVersion(type: Exec) {
-    //dependsOn 'setDevKopsConfig'
+    dependsOn 'setDevKopsConfig'
     // Set the version of the docker container to whatever we just built. If we have not done a release build since the last
     // dev (SNAPSHOT) build, this may be the same as last time, and my not cause the pod to be updated in k8s.
     // The updateDevKops task will force the update to happen each time it is executed
