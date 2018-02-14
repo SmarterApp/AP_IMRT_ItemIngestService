@@ -2,4 +2,4 @@
 logging:
   level:
     org.opentestsystem: DEBUG
-    org.gitlab4j: DEBUG
+    org.gitlab4j: INFO
