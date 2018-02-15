@@ -1,5 +1,20 @@
 version: '3'
 services:
+    rabbitmq:
+        container_name: rabbit-server
+        image: rabbitmq:management
+        ports:
+            - "5672:5672"
+            - "15672:15672"
+        networks:
+            - spring-cloud-network
+        healthcheck:
+          test: ["CMD", "rabbitmqctl", "node_health_check"]
+          interval: 30s
+          timeout: 5s
+          retries: 3
+        logging:
+            driver: json-file
     configuration-service:
         container_name: configuration-service
         image: @dockerTagBase@/configuration-service:@configServerVersion@
@@ -45,8 +60,10 @@ services:
             - spring-cloud-network
         links:
             - configuration-service
+            - rabbitmq
         depends_on:
             - configuration-service
+            - rabbitmq
         logging:
             driver: json-file
 
