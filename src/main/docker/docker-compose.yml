@@ -53,14 +53,10 @@ services:
             GITLAB_ACCESS_TOKEN:
             GITLAB_GROUP:
             GITLAB_WEBHOOK_URL:
-
         ports:
             - 8080:8080
         networks:
             - spring-cloud-network
-        links:
-            - configuration-service
-            - rabbitmq
         depends_on:
             - configuration-service
             - rabbitmq
