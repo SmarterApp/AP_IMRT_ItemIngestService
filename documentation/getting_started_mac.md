@@ -41,3 +41,8 @@ This page explains how to get software installed for Mac.
 1. Open a terminal
 1. gradle -v
 1. The version should be displayed
+
+## Install PostgreSQL
+
+Install PostgreSQL following the instructions here:
+https://postgresapp.com/
