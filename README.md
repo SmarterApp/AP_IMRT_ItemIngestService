@@ -8,6 +8,25 @@ This project requires certain pieces of software to run. Below is hte list and r
 
 * [Getting Started For Mac](documentation/getting_started_mac.md)
 
+## Create database and users
+
+Connect into PostgreSQL using the psql command line tool. You will need to initially connect using the 'postgres' user, password is whatever you set it to during the install. Once you connect, you will need to create a new user. You can set the password to whatever you like, it doesn't have to be imrt-admin:
+
+<pre>
+psql -U postgres
+CREATE ROLE "imrt-admin" with LOGIN SUPERUSER CREATEDB CREATEROLE PASSWORD 'imrt-admin';
+\q
+</pre>
+
+Now log back in the with the user you just created, and create the database:
+
+<pre>
+psql -U imrt-admin postgres
+create database "imrt";
+</pre>
+
+From this point on, if you use psql, you will want to login with:
+<pre>psql -U imrt-admin imrt</pre> to be connected to the imrt database
 
 ## Configure global Gradle properties
 
@@ -30,7 +49,17 @@ artifactorySnapshotPublish=libs-snapshots-local
 artifactoryReleasePublish=libs-releases-local
 artifactoryUser=<artifactory User>
 artifactoryPassword=<ask smarterbalanced>
+
+# Database connectivity info
+flyway.user=<user>
+flyway.password=<password>
+flyway.url=<url> # Sample URL for local database named imrt: jdbc:postgresql://localhost:5432/imrt
 ```
+
+## Create database tables
+
+Clone the AP_IMRT_Schema project from https://github.com/SmarterApp/AP_IMRT_Schema. Run the gradle task "flywayMigrate" to create the database tables.
+
 
 ## Building with Gradle
 <pre>./gradlew build</pre>
