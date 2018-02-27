@@ -1,6 +1,6 @@
 # IMRT Item Ingest Service
 
-The Item Ingest Service is reponsible for ingesting the item data created by the content team. This project is part of the Item Metadata and Reporting Tool.
+The Item Ingest Service is responsible for ingesting the item data created by the content team. This project is part of the Item Metadata and Reporting Tool.
 
 # Getting Started
 
