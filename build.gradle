@@ -34,6 +34,11 @@ repositories {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+// Exclude logback, we will use log4j
+configurations {
+    compile.exclude module: 'spring-boot-starter-logging'
+}
+
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.springframework.boot:spring-boot-starter-actuator'
@@ -41,6 +46,7 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-aop'
     compile 'org.springframework.boot:spring-boot-starter-amqp'
     compile 'org.springframework.retry:spring-retry'
+    compile 'org.springframework.boot:spring-boot-starter-log4j2'
     compile 'org.gitlab4j:gitlab4j-api:4.8.2'
     clover 'org.openclover:clover:4.2.0'
     testCompile 'org.springframework.boot:spring-boot-starter-test'
