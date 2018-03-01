@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn">
+    <Properties>
+        <Property name="PID">????</Property>
+        <Property name="LOG_LEVEL_PATTERN">%5p</Property>
+        <Property name="CONSOLE_LOG_PATTERN">%clr{%d{yyyy-MM-dd HH:mm:ss.SSS}}{faint} %clr{${LOG_LEVEL_PATTERN}} %clr{${sys:PID}}{magenta} %clr{---}{faint} %clr{[%15.15t]}{faint} %clr{%-40.40c{1.}}{cyan} %clr{:}{faint} %m%n</Property>
+        <Property name="HOSTNAME">${env:HOSTNAME:-unknown}</Property>
+        <Property name="GRAYLOG_HOST">${env:GRAYLOG_HOST:-localhost}</Property>
+        <Property name="GRAYLOG_PORT">${env:GRAYLOG_PORT:-12201}</Property>
+    </Properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT" immediateFlush="false">
+            <PatternLayout pattern="${sys:CONSOLE_LOG_PATTERN}" />
+        </Console>
+        <Socket name="Graylog" protocol="udp" host="${GRAYLOG_HOST}" port="${GRAYLOG_PORT}" immediateFlush="false">
+            <GelfLayout host="${HOSTNAME}" compressionType="ZLIB" compressionThreshold="1024">
+                <KeyValuePair key="application" value="iis"/>
+                <KeyValuePair key="system" value="iis"/>
+            </GelfLayout>
+        </Socket>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="Graylog"/>
+        </Root>
+    </Loggers>
+</Configuration>
