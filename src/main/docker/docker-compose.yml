@@ -55,6 +55,9 @@ services:
             GITLAB_GROUP:
             GITLAB_WEBHOOK_URL:
             SPRING_RABBITMQ_HOST: "rabbitmq"
+            SPRING_DATASOURCE_URL: "jdbc:postgresql://docker.for.mac.host.internal:5432/imrt"
+            SPRING_DATASOURCE_USERNAME: "imrt-ingest"
+            SPRING_DATASOURCE_PASSWORD:
         ports:
             - 8080:8080
         networks:
