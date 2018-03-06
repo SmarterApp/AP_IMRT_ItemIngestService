@@ -5,3 +5,10 @@ logging:
   level:
     org.opentestsystem: DEBUG
     org.gitlab4j: INFO
+
+spring:
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/test"
+    username: test
+    password: test
+
