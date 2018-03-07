@@ -7,8 +7,6 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
   datasource:
     url: "jdbc:postgresql://localhost:5432/imrt"
-    username: imrt_ingest
-    password: password
 
 logging:
   level:
