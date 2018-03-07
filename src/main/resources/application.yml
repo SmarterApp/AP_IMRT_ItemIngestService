@@ -1,8 +1,14 @@
+# Values to use when running on a development box. These will be overridden
+# when using the remote configuration service.
 spring:
   jpa:
     hibernate:
       ddl-auto: validate
     database-platform: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/imrt"
+    username: imrt_ingest
+    password: password
 
 logging:
   level:
