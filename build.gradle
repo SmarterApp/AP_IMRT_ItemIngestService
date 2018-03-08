@@ -60,6 +60,7 @@ dependencies {
     clover 'org.openclover:clover:4.2.0'
     testCompile 'org.springframework.boot:spring-boot-starter-test'
     testCompile 'com.h2database:h2'
+    testCompile 'org.assertj:assertj-core:3.9.1'
 }
 
 dependencyManagement {
@@ -115,6 +116,11 @@ findbugs {
  */
 task unitTest (type: Test) {
     exclude '**/*IntegrationTest.class'
+    exclude '**/*RepositoryTest.class'
+}
+
+tasks.withType(Test) {
+    exclude '**/BaseIntegrationTest.class'
 }
 
 /***************************
