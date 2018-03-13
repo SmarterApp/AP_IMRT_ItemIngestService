@@ -1,0 +1,100 @@
+{
+
+  "id" : "205071",
+
+  "type" : "tut",
+
+  "version" : "iat-5",
+
+  "core" : {
+
+    "en" : {
+
+      "content" : "<p>Some tutorial content</p>",
+
+      "isRequired" : "true",
+
+      "isProvided" : true
+
+    },
+
+    "attachments" : [ ]
+
+  },
+
+  "asl" : {
+
+    "attachments" : [ ],
+
+    "isAslRequired" : "undetermined",
+
+    "isAslProvided" : false
+
+  },
+
+  "braille" : {
+
+    "attachments" : [ ],
+
+    "isBrailleRequired" : "undetermined",
+
+    "isBrailleProvided" : false
+
+  },
+
+  "cc" : {
+
+    "attachments" : [ ],
+
+    "isCcRequired" : "undetermined",
+
+    "isCcProvided" : false,
+
+    "itemCcAudioAssociations" : [ ]
+
+  },
+
+  "images" : {
+
+    "imageResources" : [ ]
+
+  },
+
+  "audio" : {
+
+    "audioResources" : [ ]
+
+  },
+
+  "textToSpeech" : {
+
+    "isVisualTTSRequired" : "undetermined",
+
+    "isVisualTTSProvided" : false,
+
+    "isSightTTSProvided" : false
+
+  },
+
+  "workflow" : {
+
+    "workflowStatusCode" : "SmarterContentReview"
+
+  },
+
+  "translations" : {
+
+    "esp" : {
+
+      "content" : "",
+
+      "isRequired" : "undetermined",
+
+      "isProvided" : false
+
+    }
+
+  }
+
+}
+
