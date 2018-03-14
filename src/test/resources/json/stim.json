@@ -1,0 +1,198 @@
+{
+
+  "id" : "205034",
+
+  "type" : "stim",
+
+  "version" : "iat-5",
+
+  "core" : {
+
+    "en" : {
+
+      "content" : "<p>stimulus main content</p>",
+
+      "isRequired" : "true",
+
+      "isProvided" : true
+
+    },
+
+    "metadata" : {
+
+      "accessibilityLanguageComplexity" : "",
+
+      "calculator" : "",
+
+      "claim2Category" : "",
+
+      "claim2SubCategory" : "",
+
+      "contentDomain" : "",
+
+      "contentTaskModel" : "",
+
+      "copyrightHolder" : "",
+
+      "copyrightHolderOther" : "",
+
+      "depthOfKnowledge" : "",
+
+      "grade" : "",
+
+      "algebraDescriptor1" : "",
+
+      "algebraDescriptor2" : "",
+
+      "itemPoint" : "",
+
+      "knowledgeDemands" : "",
+
+      "languageFeatures" : "",
+
+      "maxGrade" : "",
+
+      "meaningPurpose" : "",
+
+      "minGrade" : "",
+
+      "passageName" : "",
+
+      "performanceTask" : "",
+
+      "primaryAssessmentTarget" : "",
+
+      "primaryClaim" : "",
+
+      "primaryCommonCoreStandard" : "",
+
+      "primaryContentDomain" : "",
+
+      "quaternaryAssessmentTarget" : "",
+
+      "quaternaryClaim" : "",
+
+      "quaternaryCommonCoreStandard" : "",
+
+      "quaternaryContentDomain" : "",
+
+      "readabilityFleschKincaid" : "",
+
+      "readabilityLexile" : "",
+
+      "scoringEngine" : "",
+
+      "scoringPoints" : "",
+
+      "secondaryAssessmentTarget" : "",
+
+      "secondaryClaim" : "",
+
+      "secondaryCommonCoreStandard" : "",
+
+      "secondaryContentDomain" : "",
+
+      "stimulusFormat" : "",
+
+      "stimulusLength" : "",
+
+      "structure" : "",
+
+      "subject" : "",
+
+      "tertiaryAssessmentTarget" : "",
+
+      "tertiaryClaim" : "",
+
+      "tertiaryCommonCoreStandard" : "",
+
+      "tertiaryContentDomain" : "",
+
+      "testCategory" : "",
+
+      "wordCount" : "",
+
+      "writingPurpose" : ""
+
+    },
+
+    "attachments" : [ ]
+
+  },
+
+  "asl" : {
+
+    "attachments" : [ ],
+
+    "isAslRequired" : "undetermined",
+
+    "isAslProvided" : false
+
+  },
+
+  "braille" : {
+
+    "attachments" : [ ],
+
+    "isBrailleRequired" : "undetermined",
+
+    "isBrailleProvided" : false
+
+  },
+
+  "cc" : {
+
+    "attachments" : [ ],
+
+    "isCcRequired" : "undetermined",
+
+    "isCcProvided" : false,
+
+    "itemCcAudioAssociations" : [ ]
+
+  },
+
+  "images" : {
+
+    "imageResources" : [ ]
+
+  },
+
+  "audio" : {
+
+    "audioResources" : [ ]
+
+  },
+
+  "textToSpeech" : {
+
+    "isVisualTTSRequired" : "undetermined",
+
+    "isVisualTTSProvided" : false,
+
+    "isSightTTSProvided" : false
+
+  },
+
+  "workflow" : {
+
+    "workflowStatusCode" : "Draft"
+
+  },
+
+  "translations" : {
+
+    "esp" : {
+
+      "content" : "",
+
+      "isRequired" : "undetermined",
+
+      "isProvided" : false
+
+    }
+
+  }
+
+}
+

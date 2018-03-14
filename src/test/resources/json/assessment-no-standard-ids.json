@@ -1,0 +1,239 @@
+{
+
+  "id" : "205030",
+
+  "type" : "mc",
+
+  "version" : "iat-5",
+
+  "core" : {
+
+    "stimulusId" : null,
+
+    "tutorialId" : null,
+
+    "enemyItems" : [ ],
+
+    "metadata" : {
+
+      "accessibilityLanguageComplexity" : "",
+
+      "calculator" : "",
+
+      "claim2Category" : "",
+
+      "claim2SubCategory" : "",
+
+      "contentDomain" : "",
+
+      "contentTaskModel" : "",
+
+      "copyrightHolder" : "",
+
+      "copyrightHolderOther" : "",
+
+      "depthOfKnowledge" : "2",
+
+      "grade" : "5",
+
+      "algebraDescriptor1" : "",
+
+      "algebraDescriptor2" : "",
+
+      "itemPoint" : "",
+
+      "knowledgeDemands" : "",
+
+      "languageFeatures" : "",
+
+      "maxGrade" : "",
+
+      "meaningPurpose" : "",
+
+      "minGrade" : "",
+
+      "passageName" : "",
+
+      "performanceTask" : "",
+
+      "primaryAssessmentTarget" : "",
+
+      "primaryClaim" : "",
+
+      "primaryCommonCoreStandard" : "",
+
+      "primaryContentDomain" : "",
+
+      "quaternaryAssessmentTarget" : "",
+
+      "quaternaryClaim" : "",
+
+      "quaternaryCommonCoreStandard" : "",
+
+      "quaternaryContentDomain" : "",
+
+      "readabilityFleschKincaid" : "",
+
+      "readabilityLexile" : "",
+
+      "scoringEngine" : "",
+
+      "scoringPoints" : "",
+
+      "secondaryAssessmentTarget" : "",
+
+      "secondaryClaim" : "",
+
+      "secondaryCommonCoreStandard" : "",
+
+      "secondaryContentDomain" : "",
+
+      "stimulusFormat" : "",
+
+      "stimulusLength" : "",
+
+      "structure" : "",
+
+      "subject" : "Math",
+
+      "tertiaryAssessmentTarget" : "",
+
+      "tertiaryClaim" : "",
+
+      "tertiaryCommonCoreStandard" : "",
+
+      "tertiaryContentDomain" : "",
+
+      "testCategory" : "",
+
+      "wordCount" : "",
+
+      "writingPurpose" : ""
+
+    },
+
+    "en" : {
+
+      "prompt" : "<p>Which equation has the same unknown value as&nbsp;<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mn>30</mn><mo>&#247;</mo><mo>&#9633;</mo><mo>=</mo><mn>6</mn></math>?</p>",
+
+      "options" : [ {
+
+        "rationale" : "The student incorrectly understand the value of the variable.",
+
+        "text" : "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mn>6</mn><mo>&#215;</mo><mn>30</mn><mo>=</mo><mo>&#9633;</mo></math></p>",
+
+        "isCorrectAnswer" : false
+
+      }, {
+
+        "rationale" : "The student incorrectly understand the value of the variable.",
+
+        "text" : "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mn>6</mn><mo>&#247;</mo><mn>30</mn><mo>=</mo><mo>&#9633;</mo></math></p>",
+
+        "isCorrectAnswer" : false
+
+      }, {
+
+        "rationale" : "Correct response",
+
+        "text" : "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mn>6</mn><mo>&#215;</mo><mo>&#9633;</mo><mo>=</mo><mn>30</mn></math></p>",
+
+        "isCorrectAnswer" : false
+
+      }, {
+
+        "rationale" : "The student incorrectly understand the value of the variable.",
+
+        "text" : "<p><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mn>6</mn><mo>&#247;</mo><mo>&#9633;</mo><mo>=</mo><mn>30</mn></math></p>",
+
+        "isCorrectAnswer" : false
+
+      } ],
+
+      "isRequired" : "true",
+
+      "isProvided" : true
+
+    },
+
+    "attachments" : [ ]
+
+  },
+
+  "asl" : {
+
+    "attachments" : [ ],
+
+    "isAslRequired" : "undetermined",
+
+    "isAslProvided" : false
+
+  },
+
+  "braille" : {
+
+    "attachments" : [ ],
+
+    "isBrailleRequired" : "undetermined",
+
+    "isBrailleProvided" : false
+
+  },
+
+  "cc" : {
+
+    "attachments" : [ ],
+
+    "isCcRequired" : "undetermined",
+
+    "isCcProvided" : false,
+
+    "itemCcAudioAssociations" : [ ]
+
+  },
+
+  "images" : {
+
+    "imageResources" : [ ]
+
+  },
+
+  "audio" : {
+
+    "audioResources" : [ ]
+
+  },
+
+  "textToSpeech" : {
+
+    "isVisualTTSRequired" : "undetermined",
+
+    "isVisualTTSProvided" : false,
+
+    "isSightTTSProvided" : false
+
+  },
+
+  "workflow" : {
+
+    "workflowStatusCode" : "Draft"
+
+  },
+
+  "translations" : {
+
+    "esp" : {
+
+      "prompt" : "",
+
+      "options" : [ ],
+
+      "isRequired" : "undetermined",
+
+      "isProvided" : false
+
+    }
+
+  }
+
+}

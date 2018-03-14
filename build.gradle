@@ -41,6 +41,9 @@ configurations {
     // This is pulled in from ap-common, we don't want security
     // on our endpoints, at least for now
     compile.exclude module: 'spring-boot-starter-security'
+
+    // Avoid having to list the findbugs annotations twice
+    testCompile.extendsFrom compileOnly
 }
 
 dependencies {
