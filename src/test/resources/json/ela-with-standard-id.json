@@ -1,0 +1,208 @@
+{
+
+  "id" : "205073",
+
+  "type" : "mc",
+
+  "version" : "iat-5",
+
+  "core" : {
+
+    "stimulusId" : null,
+
+    "tutorialId" : null,
+
+    "enemyItems" : [ ],
+
+    "metadata" : {
+
+      "accessibilityLanguageComplexity" : "",
+
+      "calculator" : "",
+
+      "claim2Category" : "",
+
+      "claim2SubCategory" : "",
+
+      "contentDomain" : "ReadingInformation",
+
+      "contentTaskModel" : "Primary Content Model",
+
+      "copyrightHolder" : "",
+
+      "copyrightHolderOther" : "",
+
+      "depthOfKnowledge" : "2",
+
+      "grade" : "6",
+
+      "algebraDescriptor1" : "",
+
+      "algebraDescriptor2" : "",
+
+      "itemPoint" : "",
+
+      "knowledgeDemands" : "",
+
+      "languageFeatures" : "",
+
+      "maxGrade" : "",
+
+      "meaningPurpose" : "",
+
+      "minGrade" : "",
+
+      "passageName" : "",
+
+      "performanceTask" : "",
+
+      "primaryAssessmentTarget" : "Primary Target",
+
+      "primaryClaim" : "3",
+
+      "primaryCommonCoreStandard" : "Primary Standard",
+
+      "primaryContentDomain" : "",
+
+      "quaternaryAssessmentTarget" : "",
+
+      "quaternaryClaim" : "",
+
+      "quaternaryCommonCoreStandard" : "",
+
+      "quaternaryContentDomain" : "",
+
+      "readabilityFleschKincaid" : "",
+
+      "readabilityLexile" : "",
+
+      "scoringEngine" : "",
+
+      "scoringPoints" : "",
+
+      "secondaryAssessmentTarget" : "",
+
+      "secondaryClaim" : "",
+
+      "secondaryCommonCoreStandard" : "Secondary Standard",
+
+      "secondaryContentDomain" : "",
+
+      "stimulusFormat" : "",
+
+      "stimulusLength" : "",
+
+      "structure" : "",
+
+      "subject" : "ELA",
+
+      "tertiaryAssessmentTarget" : "",
+
+      "tertiaryClaim" : "",
+
+      "tertiaryCommonCoreStandard" : "",
+
+      "tertiaryContentDomain" : "",
+
+      "testCategory" : "",
+
+      "wordCount" : "",
+
+      "writingPurpose" : ""
+
+    },
+
+    "en" : {
+
+      "prompt" : "<p>Testing 1 2 3&nbsp;</p>",
+
+      "options" : [ ],
+
+      "isRequired" : "true",
+
+      "isProvided" : true
+
+    },
+
+    "attachments" : [ ]
+
+  },
+
+  "asl" : {
+
+    "attachments" : [ ],
+
+    "isAslRequired" : "undetermined",
+
+    "isAslProvided" : false
+
+  },
+
+  "braille" : {
+
+    "attachments" : [ ],
+
+    "isBrailleRequired" : "undetermined",
+
+    "isBrailleProvided" : false
+
+  },
+
+  "cc" : {
+
+    "attachments" : [ ],
+
+    "isCcRequired" : "undetermined",
+
+    "isCcProvided" : false,
+
+    "itemCcAudioAssociations" : [ ]
+
+  },
+
+  "images" : {
+
+    "imageResources" : [ ]
+
+  },
+
+  "audio" : {
+
+    "audioResources" : [ ]
+
+  },
+
+  "textToSpeech" : {
+
+    "isVisualTTSRequired" : "undetermined",
+
+    "isVisualTTSProvided" : false,
+
+    "isSightTTSProvided" : false
+
+  },
+
+  "workflow" : {
+
+    "workflowStatusCode" : "Draft"
+
+  },
+
+  "translations" : {
+
+    "esp" : {
+
+      "prompt" : "",
+
+      "options" : [ ],
+
+      "isRequired" : "undetermined",
+
+      "isProvided" : false
+
+    }
+
+  }
+
+}
+
