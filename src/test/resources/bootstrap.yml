@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: "ap-imrt-iis"
+
+  cloud:
+    config:
+      enabled: false
+
