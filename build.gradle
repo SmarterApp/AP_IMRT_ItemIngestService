@@ -240,3 +240,20 @@ task kopsUpdateDeployment(type: Exec) {
     args = ['patch', 'deployment', 'ap-imrt-iis-deployment', '-p', String.format("{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"date\":\"%s\"}}}}}", new Date().getTime())]
 }
 
+/**
+ * Save the current build.gradle and gradle.properties file to the build directory.
+ * This will be used during release builds to save the release revision, which is
+ * not available at the end of the build as gradle.properties has been modified to
+ * increment the build version and add the SNAPSHOT tag.
+ *
+ * These files can then be published as an artifact in Bamboo, and used during
+ * deployment builds.
+ */
+task revisionSave(type: Copy) {
+    from '.'
+    into 'build/release'
+    include 'build.gradle'
+    include 'gradle.properties'
+}
+
+
