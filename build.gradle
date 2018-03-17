@@ -221,13 +221,13 @@ task dockerRemoveImage(type: DockerRemoveImage) {
 /**
  * Kubernetes
  */
-task setDevKopsConfig(type: Exec) {
+task kopsConfigSet(type: Exec) {
     executable = 'kops'
-    args = ['export', 'kubecfg', '--state', "${project.kubecfgState}", '--name', "${project.kubecfgDevName}"]
+    args = ['export', 'kubecfg', '--state', "${project.kubecfgState}", '--name', "${project.kubecfgName}"]
 }
 
-task setDevKopsVersion(type: Exec) {
-    dependsOn 'setDevKopsConfig'
+task kopsVersionSet(type: Exec) {
+    dependsOn 'kopsConfigSet'
     // Set the version of the docker container to whatever we just built. If we have not done a release build since the last
     // dev (SNAPSHOT) build, this may be the same as last time, and my not cause the pod to be updated in k8s.
     // The updateDevKops task will force the update to happen each time it is executed
@@ -235,11 +235,28 @@ task setDevKopsVersion(type: Exec) {
     args = ['set', 'image', 'deployment/ap-imrt-iis-deployment', "ap-imrt-iis=${project.dockerTagBase}/ap-imrt-iis:${project.version}"]
 }
 
-task updateDevKops(type: Exec) {
-    dependsOn 'setDevKopsVersion'
+task kopsUpdateDeployment(type: Exec) {
+    dependsOn 'kopsVersionSet'
     // Patch the deployment by changing the date inside the specification. This will cause the pod to be restarted. Since we have
     // the deployment set to always pull the docker image, this will pick up the latest version even if the tag didn't change
     executable = 'kubectl'
     args = ['patch', 'deployment', 'ap-imrt-iis-deployment', '-p', String.format("{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"date\":\"%s\"}}}}}", new Date().getTime())]
 }
+
+/**
+ * Save the current build.gradle and gradle.properties file to the build directory.
+ * This will be used during release builds to save the release revision, which is
+ * not available at the end of the build as gradle.properties has been modified to
+ * increment the build version and add the SNAPSHOT tag.
+ *
+ * These files can then be published as an artifact in Bamboo, and used during
+ * deployment builds.
+ */
+task revisionSave(type: Copy) {
+    from '.'
+    into 'build/release'
+    include 'build.gradle'
+    include 'gradle.properties'
+}
+
 
