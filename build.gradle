@@ -22,7 +22,6 @@ plugins {
     id 'jacoco'
     id 'maven-publish'
     id 'com.jfrog.artifactory' version '4.4.14'
-    id 'com.bmuschko.clover' version '2.2.0'
     id 'com.bmuschko.docker-remote-api' version '3.2.3'
 }
 apply plugin: 'io.github.robwin.jgitflow'
@@ -64,7 +63,6 @@ dependencies {
     compile 'org.postgresql:postgresql:42.2.1'
     // Type mappings for hibernate -> PostgreSQL Json
     compile 'com.vladmihalcea:hibernate-types-5:2.0.0'
-    clover 'org.openclover:clover:4.2.0'
     testCompile 'org.springframework.boot:spring-boot-starter-test'
     testCompile 'com.h2database:h2'
     testCompile 'org.assertj:assertj-core:3.9.1'
@@ -165,12 +163,11 @@ artifactory {
 
 tasks.artifactoryPublish.dependsOn build
 
-/**
- * Clover configuration
- */
-clover {
-    report {
-        html = true
+jacocoTestReport {
+    reports {
+        xml.enabled false
+        csv.enabled false
+        html.destination file("${buildDir}/jacocoHtml")
     }
 }
 
