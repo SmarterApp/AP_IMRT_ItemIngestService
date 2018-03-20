@@ -68,8 +68,8 @@ Clone the AP_IMRT_Schema project from https://github.com/SmarterApp/AP_IMRT_Sche
 Make sure you populate both the imrt and the test database:
 
 <pre>
-gw -Pflyway.user=test -Pflyway.password=<password> -Pflyway.url=jdbc:postgresql://localhost:5432/test flywayMigrate
-gw -Pflyway.user=imrt_admin -Pflyway.password=<password> -Pflyway.url=jdbc:postgresql://localhost:5432/imrt flywayMigrate
+./gradlew -Pflyway.user=test -Pflyway.password=<password> -Pflyway.url=jdbc:postgresql://localhost:5432/test flywayMigrate
+./gradlew -Pflyway.user=imrt_admin -Pflyway.password=<password> -Pflyway.url=jdbc:postgresql://localhost:5432/imrt flywayMigrate
 </pre>
 
 
