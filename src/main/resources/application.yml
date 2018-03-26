@@ -12,3 +12,9 @@ logging:
   level:
     org.opentestsystem: DEBUG
     org.gitlab4j: INFO
+
+iis:
+  retry-initial-interval: 1000
+  retry-interval-multiplier: 2
+  retry-max-interval: 5000
+  retry-amount: 3
