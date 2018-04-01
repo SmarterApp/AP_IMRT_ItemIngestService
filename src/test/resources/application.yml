@@ -10,3 +10,9 @@ spring:
   datasource:
     url: "jdbc:postgresql://localhost:5432/test"
 
+itembank:
+  host: "${GITLAB_HOST:https://localhost}"
+  accessToken: "${GITLAB_ACCESS_TOKEN}"
+  group: "${GITLAB_GROUP}"
+  webhookUrl: "${GITLAB_WEBHOOK_URL:http://docker.for.mac.host.internal:8080/webHook}"
+
