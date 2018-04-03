@@ -1,6 +1,6 @@
 test:
   # Used to conditionally create certain beans during testing
-  enabled: true
+  enabled: false
 logging:
   level:
     org.opentestsystem: DEBUG
