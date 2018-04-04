@@ -41,7 +41,7 @@ services:
         container_name: ap-imrt-iis-service
         image: @dockerTagBase@/ap-imrt-iis:@version@
         healthcheck:
-          test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+          test: ["CMD", "curl", "-f", "http://localhost:8008/health"]
           interval: 30s
           timeout: 5s
           retries: 3
@@ -59,6 +59,7 @@ services:
             SPRING_DATASOURCE_PASSWORD:
         ports:
             - 8080:8080
+            - 8008:8008
         networks:
             - spring-cloud-network
         depends_on:
