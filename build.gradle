@@ -196,6 +196,9 @@ task dockerCopyFiles(type: Copy) {
     from("build/libs/${jar.archiveName}") {
     }
 
+    from('./sync-job.sh') {
+    }
+
     into 'build/docker'
 }
 
