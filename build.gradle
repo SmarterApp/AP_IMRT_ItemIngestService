@@ -50,7 +50,7 @@ dependencies {
     compileOnly 'com.google.code.findbugs:annotations:3.0.1'
     compile 'org.hibernate:hibernate-java8:5.0.12.Final'
     compile 'org.opentestsystem.ap:ap-common:0.3.35'
-    compile 'org.opentestsystem.ap:ap-imrt-common:0.1.23-SNAPSHOT'
+    compile 'org.opentestsystem.ap:ap-imrt-common:0.1.23'
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.springframework.boot:spring-boot-starter-actuator'
     compile 'org.springframework.cloud:spring-cloud-starter-config'
@@ -74,6 +74,11 @@ dependencyManagement {
     }
 }
 
+test {
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
 
 /***************************
  * build information
