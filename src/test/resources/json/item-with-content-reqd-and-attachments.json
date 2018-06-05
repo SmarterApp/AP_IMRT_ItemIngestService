@@ -1,0 +1,312 @@
+{
+
+  "id" : "205679",
+
+  "type" : "stim",
+
+  "version" : "iat-11.2",
+
+  "asl" : {
+
+    "attachments" : [ {
+
+      "fileName" : "PaSsaGe_205679_ASL_STEM.MP4",
+
+      "uploadedDate" : "2018-05-25T20:57:45.000Z"
+
+    } ],
+
+    "isAslProvided" : false,
+
+    "isAslRequired" : "true"
+
+  },
+
+  "audio" : {
+
+    "audioResources" : [ {
+
+      "id" : "1",
+
+      "isProductionFilesProvided" : true,
+
+      "productionFiles" : [ {
+
+        "fileName" : "passage_205679_v6_stim_audio1.ogg",
+
+        "uploadedDate" : "2018-05-25T20:54:53.000Z"
+
+      }, {
+
+        "fileName" : "passage_205679_v6_stim3732_audio1.m4a",
+
+        "uploadedDate" : "2018-05-25T20:55:01.000Z"
+
+      } ],
+
+      "transcriptFile" : {
+
+        "fileName" : null,
+
+        "uploadedDate" : null
+
+      }
+
+    } ]
+
+  },
+
+  "braille" : {
+
+    "attachments" : [ {
+      "fileName" : "braille_file.brf",
+      "uploadedDate" : "2018-05-25T20:55:27.000Z"
+    } ],
+
+    "isBrailleProvided" : false,
+
+    "isBrailleRequired" : "undetermined"
+
+  },
+
+  "cc" : {
+
+    "attachments" : [ {
+
+      "fileName" : "passage_205679_v2_2014_Audio1.vtt",
+
+      "uploadedDate" : "2018-05-25T20:55:27.000Z"
+
+    } ],
+
+    "isCcProvided" : false,
+
+    "isCcRequired" : "true",
+
+    "itemCcAudioAssociations" : [ {
+
+      "audioResourceId" : "1",
+
+      "ccFileName" : "passage_205679_v2_2014_Audio1.vtt"
+
+    } ]
+
+  },
+
+  "core" : {
+
+    "attachments" : [ ],
+
+    "en" : {
+
+      "content" : "<p style=\"text-align: center;\"><img class=\"place-holder\" title=\"Image Resource 1\" data-iat-image-resource-id=\"1\" src=\"/assets/ckeditor/plugins/iatimage/icons/image-place-01.png\" /></p><p style=\"text-align: center;\"><u><em><strong>Masks</strong></em></u></p><p>She had blue skin.<br />And so did he.<br />He kept it hid<br />And so did she.<br />They searched for blue<br />Their whole life through,<br />Then passed right by&mdash;<br />And never knew.</p><p><img class=\"place-holder\" title=\"Audio Resource 1\" data-iat-audio-resource-id=\"1\" src=\"/assets/ckeditor/plugins/iataudio/icons/audio-place-01.png\" /></p>",
+
+      "isManagedByIat" : true,
+
+      "isProvided" : true,
+
+      "isRequired" : "true",
+
+      "updatedDate" : "2018-05-25T20:56:44.150Z"
+
+    },
+
+    "metadata" : {
+
+      "accessibilityLanguageComplexity" : "",
+
+      "algebraDescriptor1" : "",
+
+      "algebraDescriptor2" : "",
+
+      "allowCalculator" : "",
+
+      "claim2Category" : "",
+
+      "claim2SubCategory" : "",
+
+      "contentTaskModel" : "",
+
+      "copyrightHolder" : "PublicDomain",
+
+      "copyrightHolderOther" : "test",
+
+      "depthOfKnowledge" : "",
+
+      "easyListeningFormula" : "tess",
+
+      "estimatedQuintile" : "",
+
+      "evidenceStatement" : "",
+
+      "intendedGrade" : "5",
+
+      "itemAuthor" : "tessara",
+
+      "languageFeatures" : "VeryComplex",
+
+      "maxGrade" : "",
+
+      "maximumPoints" : "",
+
+      "meaningPurpose" : "VeryComplex",
+
+      "minGrade" : "",
+
+      "organizationName" : "ACME",
+
+      "organizationTypeId" : "Non-Member",
+
+      "performanceTask" : "",
+
+      "performanceTaskPosition" : "",
+
+      "presentationFormat" : [ ],
+
+      "primaryClaim" : "1",
+
+      "primaryCommonCoreStandard" : "",
+
+      "primaryContentDomain" : "tess",
+
+      "primaryEmphasis" : null,
+
+      "primaryMathematicalPractice" : "",
+
+      "primaryTarget" : "",
+
+      "primaryTargetSet" : "",
+
+      "quaternaryClaim" : "",
+
+      "quaternaryCommonCoreStandard" : "",
+
+      "quaternaryContentDomain" : "",
+
+      "quaternaryMathematicalPractice" : "",
+
+      "quaternaryTarget" : "",
+
+      "readabilityFleschKincaid" : "tess",
+
+      "readabilityLexile" : "tess",
+
+      "scorePoints" : "",
+
+      "scoringEngine" : "",
+
+      "secondaryClaim" : "",
+
+      "secondaryCommonCoreStandard" : "",
+
+      "secondaryContentDomain" : "",
+
+      "secondaryMathematicalPractice" : "",
+
+      "secondaryTarget" : "",
+
+      "specificationVersion" : "tess",
+
+      "stimulusFormat" : "Standard",
+
+      "stimulusGenre" : "Information - Argument/opinion",
+
+      "stimulusLength" : "Short",
+
+      "stimulusLiteraryCategory" : "Literary Nonfiction",
+
+      "stimulusLiteraryKnowledgeDemands" : "VeryComplex",
+
+      "stimulusName" : "tess",
+
+      "structure" : "VeryComplex",
+
+      "subject" : "ELA",
+
+      "tertiaryClaim" : "",
+
+      "tertiaryCommonCoreStandard" : "",
+
+      "tertiaryContentDomain" : "",
+
+      "tertiaryMathematicalPractice" : "",
+
+      "tertiaryTarget" : "",
+
+      "testCategory" : "",
+
+      "version" : "0.2",
+
+      "wordCount" : "342",
+
+      "writingPurpose" : "Narrative"
+
+    }
+
+  },
+
+  "images" : {
+
+    "imageResources" : [ {
+
+      "concept" : "",
+
+      "conceptFile" : {
+
+        "fileName" : null,
+
+        "uploadedDate" : null
+
+      },
+
+      "id" : "1",
+
+      "isProductionFileProvided" : true,
+
+      "productionFile" : {
+
+        "fileName" : "item_205679_masks.jpg",
+
+        "uploadedDate" : "2018-05-25T20:52:08.000Z"
+
+      }
+
+    } ]
+
+  },
+
+  "textToSpeech" : {
+
+    "isSightTTSProvided" : false,
+
+    "isVisualTTSProvided" : false,
+
+    "isVisualTTSRequired" : "undetermined"
+
+  },
+
+  "translations" : {
+
+    "esp" : {
+
+      "content" : "<p style=\"text-align: right;\"><u><em><strong>M&aacute;scaras</strong></em></u></p><p style=\"text-align: center;\">Ella ten&iacute;a la piel azul,<br />Y tambi&eacute;n &eacute;l.<br />Lo mantuvo escondido<br />Y ella tambi&eacute;n.<br />Ellos buscaron azul<br />Toda su vida a trav&eacute;s de.<br />Luego pas&oacute; justo por-<br />Y nunca lo supo.</p><p><img class=\"place-holder\" title=\"Image Resource 1\" data-iat-image-resource-id=\"1\" src=\"/assets/ckeditor/plugins/iatimage/icons/image-place-01.png\" /></p>",
+
+      "isManagedByIat" : true,
+
+      "isProvided" : false,
+
+      "isRequired" : "true",
+
+      "updatedDate" : "2018-05-25T20:55:11.560Z"
+
+    }
+
+  },
+
+  "workflow" : {
+
+    "workflowStatusCode" : "AccessibilityUpload"
+
+  }
+
+}
