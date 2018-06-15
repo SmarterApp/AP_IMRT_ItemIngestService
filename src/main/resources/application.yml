@@ -18,3 +18,4 @@ iis:
   retry-interval-multiplier: 2
   retry-max-interval: 5000
   retry-amount: 3
+  imrt-page-query-limit: 1000
