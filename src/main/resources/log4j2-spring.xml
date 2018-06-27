@@ -13,7 +13,6 @@
     <Loggers>
         <Root level="info">
             <AppenderRef ref="Console"/>
-            <AppenderRef ref="graylog-gelf"/>
         </Root>
     </Loggers>
 </Configuration>
