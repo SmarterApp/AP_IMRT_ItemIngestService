@@ -6,6 +6,21 @@
         <Property name="CONSOLE_LOG_PATTERN">%clr{%d{yyyy-MM-dd HH:mm:ss.SSS}}{faint} %clr{${LOG_LEVEL_PATTERN}} %clr{${sys:PID}}{magenta} %clr{---}{faint} %clr{[%15.15t]}{faint} %clr{%-40.40c{1.}}{cyan} %clr{:}{faint} %m%n</Property>
     </Properties>
     <Appenders>
+        <Gelf host="udp:${env:GRAYLOG_HOST:-localhost}" port="${env:GRAYLOG_PORT:-12201}"
+              name="graylog-gelf"
+              version="1.1"
+              extractStackTrace="true"
+              mdcProfiling="true"
+              originHost="%host{fqdn}">
+            <Field name="timestamp" pattern="%d{dd MMM yyyy HH:mm:ss.SSS}" />
+            <Field name="level" pattern="%5p" />
+            <Field name="className" pattern="%C" />
+            <Field name="server" pattern="%host" />
+            <Field name="environment" pattern="${env:SPRING_CLOUD_CONFIG_LABEL:-local}" />
+            <DynamicMdcFields regex="mdc.*" />
+            <DynamicMdcFields regex="(mdc|MDC)fields" />
+        </Gelf>
+
         <Console name="Console" target="SYSTEM_OUT" immediateFlush="false">
             <PatternLayout pattern="${sys:CONSOLE_LOG_PATTERN}" />
         </Console>
@@ -13,6 +28,7 @@
     <Loggers>
         <Root level="info">
             <AppenderRef ref="Console"/>
+            <AppenderRef ref="graylog-gelf"/>
         </Root>
     </Loggers>
 </Configuration>

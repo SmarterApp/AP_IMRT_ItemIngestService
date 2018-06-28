@@ -1,0 +1,344 @@
+{
+
+  "id" : "46879",
+
+  "type" : "ms",
+
+  "version" : "iat-10",
+
+  "core" : {
+
+    "stimulusId" : null,
+
+    "tutorialId" : "67775",
+
+    "enemyItems" : [ ],
+
+    "metadata" : {
+
+      "accessibilityLanguageComplexity" : "",
+
+      "algebraDescriptor1" : "",
+
+      "algebraDescriptor2" : "",
+
+      "allowCalculator" : "Y",
+
+      "claim2Category" : "",
+
+      "claim2SubCategory" : "",
+
+      "contentTaskModel" : "TM5",
+
+      "copyrightHolder" : "",
+
+      "copyrightHolderOther" : "",
+
+      "depthOfKnowledge" : "3",
+
+      "easyListeningFormula" : "",
+
+      "estimatedQuintile" : "",
+
+      "evidenceStatement" : "",
+
+      "intendedGrade" : "8",
+
+      "itemAuthor" : "Sridhar_Ravva",
+
+      "languageFeatures" : "",
+
+      "maxGrade" : "8",
+
+      "maximumPoints" : "1",
+
+      "meaningPurpose" : "",
+
+      "minGrade" : "8",
+
+      "organizationTypeId" : "",
+
+      "organizationName" : "",
+
+      "performanceTask" : "No",
+
+      "performanceTaskPosition" : "",
+
+      "presentationFormat" : [ ],
+
+      "primaryClaim" : "",
+
+      "primaryCommonCoreStandard" : "",
+
+      "primaryContentDomain" : "",
+
+      "primaryEmphasis" : null,
+
+      "primaryMathematicalPractice" : "",
+
+      "primaryTarget" : "",
+
+      "primaryTargetSet" : "",
+
+      "quaternaryClaim" : "",
+
+      "quaternaryCommonCoreStandard" : "",
+
+      "quaternaryContentDomain" : "",
+
+      "quaternaryMathematicalPractice" : "",
+
+      "quaternaryTarget" : "",
+
+      "readabilityFleschKincaid" : "",
+
+      "readabilityLexile" : "",
+
+      "scoringEngine" : "Automatic with Key(s)",
+
+      "scorePoints" : "0,  1",
+
+      "secondaryMathematicalPractice" : "",
+
+      "secondaryClaim" : "",
+
+      "secondaryCommonCoreStandard" : "",
+
+      "secondaryContentDomain" : "",
+
+      "secondaryTarget" : "",
+
+      "specificationVersion" : "",
+
+      "stimulusFormat" : "",
+
+      "stimulusGenre" : "",
+
+      "stimulusLength" : "",
+
+      "stimulusName" : "",
+
+      "stimulusLiteraryCategory" : "",
+
+      "stimulusLiteraryKnowledgeDemands" : "",
+
+      "structure" : "",
+
+      "subject" : "Math",
+
+      "tertiaryMathematicalPractice" : "",
+
+      "tertiaryClaim" : "",
+
+      "tertiaryCommonCoreStandard" : "",
+
+      "tertiaryContentDomain" : "",
+
+      "tertiaryTarget" : "",
+
+      "testCategory" : "",
+
+      "version" : "6",
+
+      "wordCount" : "",
+
+      "writingPurpose" : ""
+
+    },
+
+    "scoring" : {
+
+      "rubric" : "",
+
+      "defaultScore" : 0,
+
+      "variables" : [ ],
+
+      "rules" : [ ]
+
+    },
+
+    "en" : {
+
+      "prompt" : "<p style=\"\">Thomas bakes specialty cakes. He uses many different containers of various sizes and shapes to bake the parts of his cakes. Select <span style=\"font-weight:bold; \">all</span> of the following containers which hold the same amount of batter.</p>",
+
+      "options" : [ {
+
+        "rationale" : "<p style=\"\">&#xA0;</p>",
+
+        "text" : "<p style=\"\">a cylinder with a radius of 5 <span id=\"item_46879_TAG_5_BEGIN\">cm</span> and a height of 4 <span id=\"item_46879_TAG_6_BEGIN\">cm</span></p>",
+
+        "isCorrectAnswer" : true
+
+      }, {
+
+        "rationale" : "<p style=\"\">&#xA0;</p>",
+
+        "text" : "<p style=\"\">a cylinder with a radius of 4 <span id=\"item_46879_TAG_7_BEGIN\">cm</span> and a height of 5 <span id=\"item_46879_TAG_8_BEGIN\">cm</span></p>",
+
+        "isCorrectAnswer" : false
+
+      }, {
+
+        "rationale" : "<p style=\"\">&#xA0;</p>",
+
+        "text" : "<p style=\"\">a cone with a radius of 10 <span id=\"item_46879_TAG_9_BEGIN\">cm</span> and a height of 3 <span id=\"item_46879_TAG_10_BEGIN\">cm</span></p>",
+
+        "isCorrectAnswer" : true
+
+      }, {
+
+        "rationale" : "<p style=\"\">&#xA0;</p>",
+
+        "text" : "<p style=\"\">a hemisphere with a radius of 4 <span id=\"item_46879_TAG_11_BEGIN\">cm</span></p>",
+
+        "isCorrectAnswer" : false
+
+      } ],
+
+      "updatedDate" : "2018-05-18T20:42:19.246Z",
+
+      "isRequired" : "true",
+
+      "isManagedByIat" : true,
+
+      "isProvided" : true
+
+    },
+
+    "attachments" : [ ]
+
+  },
+
+  "asl" : {
+
+    "attachments" : [ {
+
+      "fileName" : "item_46879_ASL_STEM.mp4",
+
+      "uploadedDate" : "2018-05-18T20:42:26.907Z"
+
+    }, {
+
+      "fileName" : "item_46879_ASL_STEM.mp4",
+
+      "uploadedDate" : "2018-05-18T20:42:26.929Z"
+
+    } ],
+
+    "isAslRequired" : "undetermined",
+
+    "isAslProvided" : false
+
+  },
+
+  "braille" : {
+
+    "attachments" : [ {
+
+      "fileName" : "item_46879_enu_nemeth.brf",
+
+      "uploadedDate" : "2018-05-18T20:42:26.906Z"
+
+    } ],
+
+    "isBrailleRequired" : "undetermined",
+
+    "isBrailleProvided" : false
+
+  },
+
+  "cc" : {
+
+    "attachments" : [ ],
+
+    "isCcRequired" : "undetermined",
+
+    "isCcProvided" : false,
+
+    "itemCcAudioAssociations" : [ ]
+
+  },
+
+  "images" : {
+
+    "imageResources" : [ ]
+
+  },
+
+  "audio" : {
+
+    "audioResources" : [ ]
+
+  },
+
+  "textToSpeech" : {
+
+    "isVisualTTSRequired" : "undetermined",
+
+    "isVisualTTSProvided" : false,
+
+    "isSightTTSProvided" : false
+
+  },
+
+  "workflow" : {
+
+    "workflowStatusCode" : "ParkingLot"
+
+  },
+
+  "translations" : {
+
+    "esp" : {
+
+      "prompt" : "<p style=\"\">Thomas hace pasteles especiales. Él usa muchos recipientes distintos de tamaños diversos y formas diferentes para hornear las partes de sus pasteles. Selecciona <span style=\"font-weight:bold; \">todos</span> los recipientes a continuación en los que cabe la misma cantidad de masa para pastel.</p> \n<p class=\"languagedivider\">&nbsp;</p> \n<p style=\"\">Thomas bakes specialty cakes. He uses many different containers of various sizes and shapes to bake the parts of his cakes. Select <span style=\"font-weight:bold; \">all</span> of the following containers which hold the same amount of batter.</p>",
+
+      "options" : [ {
+
+        "rationale" : "<p style=\"\">&#xA0;</p>",
+
+        "text" : "<p style=\"\">un cilindro con un radio de 5 cm y una altura de 4 cm</p><p class=\"languagedivider\">&#xA0;</p><p style=\"\">a cylinder with a radius of 5 <span id=\"item_46879_TAG_5_BEGIN\">cm</span> and a height of 4 <span id=\"item_46879_TAG_6_BEGIN\">cm</span></p><p class=\"optiondivider\">&#xA0;</p>",
+
+        "isCorrectAnswer" : true
+
+      }, {
+
+        "rationale" : "<p style=\"\">&#xA0;</p>",
+
+        "text" : "<p style=\"\">un cilindro con un radio de 4 cm y una altura de 5 cm</p><p class=\"languagedivider\">&#xA0;</p><p style=\"\">a cylinder with a radius of 4 <span id=\"item_46879_TAG_7_BEGIN\">cm</span> and a height of 5 <span id=\"item_46879_TAG_8_BEGIN\">cm</span></p><p class=\"optiondivider\">&#xA0;</p>",
+
+        "isCorrectAnswer" : false
+
+      }, {
+
+        "rationale" : "<p style=\"\">&#xA0;</p>",
+
+        "text" : "<p style=\"\">un cono con un radio de 10 cm y una altura de 3 cm</p><p class=\"languagedivider\">&#xA0;</p><p style=\"\">a cone with a radius of 10 <span id=\"item_46879_TAG_9_BEGIN\">cm</span> and a height of 3 <span id=\"item_46879_TAG_10_BEGIN\">cm</span></p><p class=\"optiondivider\">&#xA0;</p>",
+
+        "isCorrectAnswer" : true
+
+      }, {
+
+        "rationale" : "<p style=\"\">&#xA0;</p>",
+
+        "text" : "<p style=\"\">una semiesfera con un radio de 4 cm</p><p class=\"languagedivider\">&#xA0;</p><p style=\"\">a hemisphere with a radius of 4 <span id=\"item_46879_TAG_11_BEGIN\">cm</span></p><p class=\"optiondivider\">&#xA0;</p>",
+
+        "isCorrectAnswer" : false
+
+      } ],
+
+      "updatedDate" : "2018-05-18T20:42:19.246Z",
+
+      "isRequired" : "undetermined",
+
+      "isManagedByIat" : true,
+
+      "isProvided" : false
+
+    }
+
+  }
+
+}
+
