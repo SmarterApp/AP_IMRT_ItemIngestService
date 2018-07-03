@@ -19,3 +19,6 @@ iis:
   retry-max-interval: 5000
   retry-amount: 3
   imrt-page-query-limit: 1000
+
+server:
+  port: 9081
