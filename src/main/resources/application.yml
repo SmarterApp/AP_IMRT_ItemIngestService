@@ -12,7 +12,7 @@ logging:
   level:
     org.opentestsystem: DEBUG
     org.gitlab4j: INFO
-#  config: classpath:log4j2-spring-local.xml
+#  config: classpath:log4j2-local.xml
 
 iis:
   retry-initial-interval: 1000
