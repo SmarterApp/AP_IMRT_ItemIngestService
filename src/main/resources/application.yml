@@ -12,10 +12,14 @@ logging:
   level:
     org.opentestsystem: DEBUG
     org.gitlab4j: INFO
+#  config: classpath:log4j2-spring-local.xml
 
 iis:
   retry-initial-interval: 1000
   retry-interval-multiplier: 2
   retry-max-interval: 5000
-  retry-amount: 3
+  retry-amount: 1
   imrt-page-query-limit: 1000
+#server:
+#  port: 9081
+
