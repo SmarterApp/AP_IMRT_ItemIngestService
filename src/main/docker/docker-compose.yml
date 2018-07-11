@@ -58,8 +58,8 @@ services:
             SPRING_DATASOURCE_USERNAME:
             SPRING_DATASOURCE_PASSWORD:
         ports:
-            - 8080:8080
-            - 8008:8008
+            - 9081:9081
+            - 9009:9009
         networks:
             - spring-cloud-network
         depends_on:
