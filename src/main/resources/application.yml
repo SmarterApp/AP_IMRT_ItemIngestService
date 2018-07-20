@@ -16,7 +16,6 @@ logging:
   level:
     org.opentestsystem: DEBUG
     org.gitlab4j: INFO
-  config: classpath:log4j2-local.xml
 
 iis:
   retry-initial-interval: 1000
@@ -34,3 +33,9 @@ itembank:
 
 server:
   port: ${IMRT_IIS_SERVER_PORT:9081}
+---
+spring:
+  profiles: local-development
+logging:
+  config: classpath:log4j2-local.xml
+
