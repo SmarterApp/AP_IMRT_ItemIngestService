@@ -23,6 +23,7 @@ iis:
   retry-max-interval: 5000
   retry-amount: 3
   imrt-page-query-limit: 1000
+  itemValidationServiceUrl: "http://localhost:8087"
 
 itembank:
   host: "${GITLAB_HOST:https://gitlab-dev.smarterbalanced.org}"
