@@ -76,7 +76,7 @@
 
       "readabilityLexile" : "",
 
-      "scoringEngine" : "",
+      "scoringEngine" : "handScored",
 
       "scoringPoints" : "",
 
