@@ -7,12 +7,15 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
   datasource:
     url: "jdbc:postgresql://localhost:5432/imrt"
+  batch:
+    job:
+      enabled: false # Prevent Spring from starting jobs on startup.
+    initialize-schema: "never" # Prevent Spring from creating the spring batch schema on startup.
 
 logging:
   level:
     org.opentestsystem: DEBUG
     org.gitlab4j: INFO
-#  config: classpath:log4j2-local.xml
 
 iis:
   retry-initial-interval: 1000
@@ -20,6 +23,20 @@ iis:
   retry-max-interval: 5000
   retry-amount: 3
   imrt-page-query-limit: 1000
+  item-validation-service-url: "http://localhost:8087"
+
+itembank:
+  host: "${GITLAB_HOST:https://gitlab-dev.smarterbalanced.org}"
+  access-token: "${GITLAB_ACCESS_TOKEN}"
+  group: "${GITLAB_GROUP}"
+  webhook-url: "${GITLAB_WEBHOOK_URL}"
+  projects-to-ignore : itembankreports
 
 server:
   port: ${IMRT_IIS_SERVER_PORT:9081}
+---
+spring:
+  profiles: local-development
+logging:
+  config: classpath:log4j2-local.xml
+
