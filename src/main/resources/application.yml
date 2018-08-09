@@ -6,7 +6,7 @@ spring:
       ddl-auto: validate
     database-platform: org.hibernate.dialect.PostgreSQLDialect
   datasource:
-    url: "jdbc:postgresql://localhost:5432/imrt"
+    url: "jdbc:postgresql://localhost:5432/imrt_temp"
   batch:
     job:
       enabled: false # Prevent Spring from starting jobs on startup.
@@ -37,4 +37,5 @@ spring:
 logging:
   config: classpath:log4j2-local.xml
 iis:
-  validate-items: false
+  ignore-validate: true
+  ignore-webhook-creation: true
