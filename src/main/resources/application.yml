@@ -36,4 +36,5 @@ spring:
   profiles: local-development
 logging:
   config: classpath:log4j2-local.xml
-
+iis:
+  validate-items: false
