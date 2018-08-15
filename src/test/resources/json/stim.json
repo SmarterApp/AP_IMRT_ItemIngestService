@@ -12,6 +12,12 @@
 
       "content" : "<p>stimulus main content</p>",
 
+      "passages" : [ {
+          "title" : "This is the english title",
+          "body" : "this is the english body"
+        }
+      ],
+
       "isRequired" : "true",
 
       "isProvided" : true
@@ -184,7 +190,18 @@
 
     "esp" : {
 
-      "content" : "",
+      "content" : "Spanish content",
+
+      "passages" : [
+        {
+          "title" : "This is the spanish title",
+          "body" : "this is the spanish body"
+        },
+        {
+          "title" : "This is the spanish title",
+          "body" : "this is the spanish body"
+        }
+      ],
 
       "isRequired" : "undetermined",
 
