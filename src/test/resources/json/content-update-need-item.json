@@ -14,23 +14,59 @@
 
     "enemyItems" : [ ],
 
-    "contentUpdateNeeds" : [ {
+    "contentUpdateNeeds" : [
+      {
 
-      "createDate" : "2018-08-18T17:24:28.558Z",
+        "createDate" : "2018-08-18T17:24:28.558Z",
 
-      "internalResolution" : "We're going to ignore",
+        "internalResolution" : "We're going to ignore",
 
-      "internalResolutionDate" : "2018-08-18T17:24:28.558Z",
+        "internalResolutionDate" : "2018-08-18T17:24:28.558Z",
 
-      "notes" : "Some general notes",
+        "notes" : "Some general notes",
 
-      "resolution" : "Resolved it",
+        "resolution" : "Resolved it",
 
-      "resolutionDate" : "2018-08-18T17:24:28.558Z",
+        "resolutionDate" : "2018-08-18T17:24:28.558Z",
 
-      "resolutionNotes" : "This was a tough one to track down"
+        "resolutionNotes" : "This was a tough one to track down"
 
-    } ],
+      },
+      {
+
+        "createDate" : "2018-08-19T17:24:28.558Z",
+
+        "internalResolution" : "We're going to take this one",
+
+        "internalResolutionDate" : "2018-08-19T17:24:28.558Z",
+
+        "notes" : "Some general notes in this one",
+
+        "resolution" : "",
+
+        "resolutionDate" : "",
+
+        "resolutionNotes" : "This was a tough one to track down"
+
+      },
+      {
+
+          "createDate" : "2018-08-21T17:24:28.558Z",
+
+          "internalResolution" : "We're going to ignore this one",
+
+          "internalResolutionDate" : "2018-08-22T17:24:28.558Z",
+
+          "notes" : "",
+
+          "resolution" : "fixed",
+
+          "resolutionDate" : "2018-08-22T17:24:28.558Z",
+
+          "resolutionNotes" : "This was a tough one to track down but we did it"
+
+      }
+    ],
 
     "metadata" : {
 
