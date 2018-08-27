@@ -214,6 +214,22 @@
 
   },
 
+  "glossary" : {
+
+    "isEnglishGlossaryProvided" : "Yes",
+
+    "isIllustratedGlossaryProvided" : "Not Needed",
+
+    "isIllustratedGlossaryRequired" : "No",
+
+    "isTranslatedGlossaryProvided" : "No",
+
+    "isTranslatedGlossaryRequired" : "Yes",
+
+    "terms" : [ ]
+
+  },
+
   "workflow" : {
 
     "workflowStatusCode" : "Draft"
