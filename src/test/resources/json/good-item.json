@@ -216,13 +216,13 @@
 
   "glossary" : {
 
-    "isEnglishGlossaryProvided" : "Yes",
+    "isEnglishGlossaryProvided" : true,
 
-    "isIllustratedGlossaryProvided" : "Not Needed",
+    "isIllustratedGlossaryProvided" : false,
 
     "isIllustratedGlossaryRequired" : "No",
 
-    "isTranslatedGlossaryProvided" : "No",
+    "isTranslatedGlossaryProvided" : true,
 
     "isTranslatedGlossaryRequired" : "Yes",
 
