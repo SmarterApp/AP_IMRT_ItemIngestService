@@ -8,6 +8,9 @@ logging:
   config: classpath:log4j2-local.xml
 
 spring:
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.session.SessionAutoConfiguration
   datasource:
     url: "jdbc:postgresql://localhost:5432/test"
 
