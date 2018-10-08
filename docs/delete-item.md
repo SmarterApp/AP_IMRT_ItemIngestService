@@ -1,3 +1,5 @@
+**NOTE**: One should never have to delete an item from IMRT because IMRT will remove the item if deleted from Gitlab.  This is here for historical reasons.
+
 # Delete an Item From IMRT
 
 [Go Back](../README.md)
@@ -7,13 +9,12 @@ An item can be deleted in one of two ways:
 1. Delete the item from GitLab directly (either via the UI or an API call)
 2. In IAT, an item that is in the "being created" state can be deleted through the IAT UI
 
-After the item has been removed from GitLab, it must also be deleted from the IMRT database.  To delete the item from the IMRT database, take the following steps:
 
 >_**WARNING:** The SQL cited below is destructive - rows will be deleted from the database.  If records are deleted by mistake, the only way to recover them is to restore the database from a backup.  We recommend taking a backup of the database prior to deleting an item from `imrt`._
 
 1. Get the item identifier of the item that was deleted.  The screenshot below shows where the item identifier can be found in the IAT UI: 
 
-	![IAT item identifier location](../assets/images/iat-item-id-location.png)
+	![IAT item identifier location](assets/images/iat-item-id-location.png)
 2. In the SQL below, replace `[item to delete]` on line 2 with the item identifier:
 
 	```sql

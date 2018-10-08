@@ -15,7 +15,7 @@ There are three types of tables in the system:
 ## Schema Design
 The scheam image below was created using [DBeaver](https://dbeaver.io/) free SQL Editor.  It can be downloaded and run to create the Entity Relationship Diagram (ERD).
 
-![IMRT ERD Image](../assets/images/imrt_erd_v1.png)
+![IMRT ERD Image](assets/images/imrt_erd_v1.png)
 
 ## Item Tables
 The item tables contain data related to the item.  These tables are populated during the item ingest from the itembank.  The itembank is currently a hosted Gitlab server, and some of the tables are related to the itembank information gathered from the Gitlab service.
