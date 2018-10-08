@@ -32,7 +32,7 @@ Once the messages have been put on the RabbitMQ queue, the Item Data Migration P
 
 Shown below is a sequence diagram of the steps described above:
 
-![item data migration sequence diagram](../assets/images/irmt-item-migration-job.png)
+![item data migration sequence diagram](assets/images/irmt-item-migration-job.png)
 
 ***NOTE:*** The message listener that intercepts the messages put on the queue by the Item Data Migration Process has been omitted for clarity.
 

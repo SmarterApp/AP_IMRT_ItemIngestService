@@ -36,7 +36,7 @@ Once the messages have been put on the RabbitMQ queue, the Item Synchronization 
 
 Shown below is a sequence diagram of the steps described above:
 
-![item synchronization sequence diagram](../assets/images/imrt-item-sync-job-sequence.png)
+![item synchronization sequence diagram](assets/images/imrt-item-sync-job-sequence.png)
 
 ***NOTE:*** The message listener that intercepts the messages put on the queue by the Item Synchronization Process has been omitted for clarity.
 
