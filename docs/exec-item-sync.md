@@ -4,7 +4,7 @@
 
 This document describes how to execute monitor and troubleshoot the [Item Synchronization Process](./item-sync.md) within an IMRT environment.
 
-## Execution
+## Sync All Items in the Item Bank
 To execute the Item Synchronization Process, create a `POST` call to the `/sync` endpoint of the Item Ingest Service.  The easiest way to execute the Item Synchronization Process is from a pod within the IMRT Kubernetes environment.  Steps are shown below:
 
 1. Log into a pod within the Kubernetes environment:  `kubectl exec -it <identifier of pod> /bin/sh`
@@ -17,7 +17,7 @@ To execute the Item Synchronization Process, create a `POST` call to the `/sync`
 
 For additional details on Kubernetes services, refer to [this page](https://kubernetes.io/docs/concepts/services-networking/service/).
 
-### Execution Outside of the Kubernetes Environment
+### Sync All Items Outside of the Kubernetes Environment
 The item synchronization process can be called from outside the Kubernetes environment, follow these steps:
 
 * Get a bearer token from OpenAM:
@@ -69,6 +69,19 @@ spec:
   # Schedule to run at 9am UTC each day
   schedule: "0 9 * * *"
 ```
+
+## Sync single item
+There is also the ability to sync a single item.  This can be useful when users are reporting a single item isn't in sync and it needs to be updated asap.  Since this only syncs a single item this minimizes the load on Gitlab.
+
+The same steps above should be referenced as far as how to call the system.  The difference is in the URL that you want to call. IMRT works on Gitlab project ids so the item itself will not work.  You must provide the Gitlab project id in the URL.  The steps below document how to get the project id with the last step containing the URL to call for the sync itself.
+
+1. Log into your gitlab instance
+1. Find the item's project in gitlab.
+	* Normally, this is in something like `gitlab url/iat-prod/<item-id>`
+1. Once on the project page go to the "Settings" page for the project. 
+1. On this page you'll see a `Project Name` and a `Project Id`.  You need to use the `Project Id` for the next step.
+1. Leveraging the steps above make sure you can access the system and use the following URL: `curl -X POST http://<Item Ingest Host>/sync/<project id>`
+
 
 ## Monitoring
 The item synchronization process writes information about its progres to the application's log file.  To monitor the item synchronization process as it runs, take the following steps, tail the log file on the Item Ingest Service pod in the Kubernetes cluster:
@@ -129,65 +142,3 @@ WHERE
 ```
 
 **NOTE:** when using pgAdmin, the stack trace may not be visible in the results field (possibly due to not handling carriage returns/line feeds properly).  If using [pgAdmin](https://www.pgadmin.org/download/), try using `psql` to execute the SQL cited above.
-
-### Resetting the Job
-The Item Synchronization Process job may occasionally fail before completing.  For example, the Kubernetes pod hosting the process is restarted before the Item Synchronization Process job finishes.  If this happens, the Spring Batch metadata tables will indicate the job is still in progress.  The SQL below can be used to identify and update the job step and job execution that are not completed:
-
-***NOTE:***  Perform a backup of the `imrt` database prior to executing _any_ of the `UPDATE` or `DELETE` statements below.
-
-```sql
--- ----------------------------------------------------------------------
--- Identify records in the batch_step_execution table that do not have a
--- status and exit_code == COMPLETED
--- ----------------------------------------------------------------------
-SELECT
-    step_execution_id,
-    job_execution_id,
-    status,
-    exit_code,
-    start_time,
-    end_time,
-    last_updated
-FROM
-    batch_step_execution
-WHERE
-    status <> 'COMPLETED'
-    OR exit_code <> 'COMPLETED';
-
--- ----------------------------------------------------------------------
--- Update the batch_step_execution table, indicating the job has finished
--- executing.
--- ----------------------------------------------------------------------
-UPDATE
-    batch_step_execution
-SET
-    status = 'COMPLETED',
-    exit_code = 'COMPLETED',
-    end_time = CURRENT_TIMESTAMP
-WHERE
-    step_execution_id = -- [the step_execution_id of the record that is incomplete]
-
--- ----------------------------------------------------------------------
--- Update the batch_job_execution table, indicating the job has finished
--- executing.
--- ----------------------------------------------------------------------
-UPDATE
-    batch_job_execution
-SET
-    status = 'COMPLETED',
-    exit_code = 'COMPLETED',
-    end_time = CURRENT_TIMESTAMP,
-    exit_message = 'Marked complete by SQL'
-WHERE
-    job_execution_id = -- [the job_execution_id of the record that is incomplete]
-```
-If the SQL cited above does not resolve this issue, delete records from the Spring Batch metadata tables:
-
-```sql
-DELETE FROM batch_step_execution_context;
-DELETE FROM batch_step_execution;
-DELETE FROM batch_job_execution_context;
-DELETE FROM batch_job_execution_params;
-DELETE FROM batch_job_execution;
-DELETE FROM batch_job_instance;
-```

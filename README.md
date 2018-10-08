@@ -14,6 +14,8 @@ At a high level the project uses the following technologies.
 * Kubernetes (deployments)
 
 ## Documentation
+IMRT Ingest is tightly integrated with the [Item Search Service](https://github.com/SmarterApp/AP_IMRT_ItemSearchService), and the two should always be deployed together.  Due to the nature of the two applications some documentation references search as well as ingest.
+
 
 1. [Main README (this file)](README.md)
 2. [Architecture](docs/Architecture.md)
@@ -29,8 +31,7 @@ At a high level the project uses the following technologies.
 * [Running and Monitoring the Item Data Migration Process](docs/exec-item-migration.md)
 
 ### Troubleshooting
-* [Items aren't syncing](docs/items-not-syncing.md)
-* [Sync job has started but not ended](docs/job_start_no_end.md)
+* [Items aren't syncing](docs/items_are_not_syncing.md)
 
 
 ## License
