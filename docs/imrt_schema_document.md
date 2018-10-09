@@ -109,7 +109,7 @@ The validation errors produced by the item content tabulator.  IMRT does not alt
 | message | varying character | the error message |
 | detail |  varying characer | the details concerning the error |
 
-### item_content_update_needs Table 
+### item\_content\_update\_needs Table 
 This table contains the associated item content update needs for the item.  It maps one ot one with the item content update needs defined for the item.
 
 ### item_git Table
