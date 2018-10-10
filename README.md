@@ -1,6 +1,6 @@
 # Item Ingest Service (IMRT)
 
-This project handles ingesting data from the item bank into the IMRT search database.  It handles capturing and deriving data which can be searched on within the [Item Authoring Tool](https://github.com/SmarterApp/AP_ItemAuthoringTool).  This readme contains the necessary information to develop, deploy, and mantain the application.
+This project handles ingesting data from the item bank into the IMRT search database.  It handles capturing and deriving data which can be searched on within the [Item Authoring Tool](https://github.com/SmarterApp/AP_ItemAuthoringTool).  This readme contains the necessary information to develop, deploy, and maintain the application.
 
 ## Tech Stack
 
