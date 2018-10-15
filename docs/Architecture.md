@@ -4,8 +4,8 @@
 
 This page describes the architecture/design of the various components/subsystems that comprise the IMRT application:
 
-### [Database Schema Document](imrt_schema_document.md)
-This document explains the IMRT schema.
+### [Database Schema Document](https://github.com/SmarterApp/AP_IMRT_Schema/blob/develop/docs/imrt_schema_document.md)
+This document describes the schema.  This will take you to the `AP_IMRT_Schema` project which has all the DB information for the IMRT project
 
 ### [Item Synchronization Process](item-sync.md)
 The item synchronization process is an endpoint in the system that can be used to sync IMRT manually with the itembank.
