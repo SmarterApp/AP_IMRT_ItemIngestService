@@ -47,7 +47,7 @@ configurations {
 }
 
 dependencies {
-    compile 'org.opentestsystem.ap:ap-imrt-common:0.1.82-SNAPSHOT'
+    compile 'org.opentestsystem.ap:ap-imrt-common:0.1.82'
     compile 'org.opentestsystem.ap:ap-common:0.4.59'
 
     compileOnly 'com.google.code.findbugs:annotations:3.0.1'
