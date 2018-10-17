@@ -13,6 +13,12 @@ At a high level the project uses the following technologies.
 * Docker
 * Kubernetes (deployments)
 
+## Linked Applications
+IMRT consists of three main projects with ingest being one of the three.  We recommend looking at the README's in the other project if you do not find what you need here.  The other two projects are:
+
+* [IMRT Schema](https://github.com/SmarterApp/AP_IMRT_Schema)
+* [IMRT Search](https://github.com/SmarterApp/AP_IMRT_ItemSearchService)
+
 ## Documentation
 IMRT Ingest is tightly integrated with the [Item Search Service](https://github.com/SmarterApp/AP_IMRT_ItemSearchService), and the two should always be deployed together.  Due to the nature of the two applications some documentation references search as well as ingest.
 
