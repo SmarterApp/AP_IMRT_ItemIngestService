@@ -17,8 +17,8 @@ spring:
 
 logging:
   level:
-    org.opentestsystem: DEBUG
-    org.gitlab4j: INFO
+    org.opentestsystem: INFO
+    org.gitlab4j: WARN
 
 iis:
   retry-amount: 3
