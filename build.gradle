@@ -1,3 +1,5 @@
+import com.sun.xml.internal.rngom.ast.builder.BuildException
+
 import java.text.SimpleDateFormat
 import com.bmuschko.gradle.docker.tasks.image.DockerBuildImage
 import com.bmuschko.gradle.docker.tasks.image.DockerPushImage
@@ -183,6 +185,30 @@ jacocoTestReport {
         xml.enabled false
         csv.enabled false
         html.destination file("${buildDir}/jacocoHtml")
+    }
+}
+
+/***************************
+ * set common version
+ ***************************/
+
+task updateCommonVersion {
+    doLast {
+        doCommonVersionUpdate(project.newCommonVersion)
+    }
+}
+
+def doCommonVersionUpdate(String version) {
+    String currentVersion = project.commonVersion
+    File propertiesFile = project.file(Project.GRADLE_PROPERTIES)
+    if (!propertiesFile.file) {
+        propertiesFile.append("commonVersion=${version}")
+    }else {
+        try {
+            project.ant.replace(file: propertiesFile, token: "commonVersion=${currentVersion}", value: "commonVersion=${version}", failOnNoReplacements: true)
+        } catch (BuildException e) {
+            throw new GradleException("Failed to update version in ${Project.GRADLE_PROPERTIES}.  Check the property exists and is formatted correctly.")
+        }
     }
 }
 
