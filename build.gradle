@@ -47,8 +47,7 @@ configurations {
 }
 
 dependencies {
-    compile 'org.opentestsystem.ap:ap-imrt-common:0.1.82'
-    compile 'org.opentestsystem.ap:ap-common:0.4.59'
+    compile "org.opentestsystem.ap:ap-common:${commonVersion}"
 
     compileOnly 'com.google.code.findbugs:annotations:3.0.1'
     compile 'org.hibernate:hibernate-java8:5.0.12.Final'
