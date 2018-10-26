@@ -1,7 +1,6 @@
 # Values to use when running on a development box. These will be overridden
 # when using the remote configuration service.
 management:
-  port: 9009
   security:
     enabled: "false"
 
