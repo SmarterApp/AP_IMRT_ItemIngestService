@@ -1,5 +1,9 @@
 # Values to use when running on a development box. These will be overridden
 # when using the remote configuration service.
+management:
+  security:
+    enabled: "false"
+
 spring:
   autoconfigure:
     exclude:
