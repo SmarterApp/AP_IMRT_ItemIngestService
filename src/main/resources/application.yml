@@ -36,6 +36,9 @@ itembank:
   webhook-url: "${GITLAB_WEBHOOK_URL}"
   projects-to-ignore : itembankreports
   api-version: "/api/v4"
+  projects-per-page: 50
+  delete-item-git-page-size: 50
+  delete-sync-disabled: false
 
 server:
   port: ${IMRT_IIS_SERVER_PORT:9081}
