@@ -204,6 +204,17 @@
 
   },
 
+  "serverManaged": {
+    "id": "205030",
+    "itsId": "",
+    "primaryEnhancedId": "M.G3.C2OA.TC.ABC",
+    "quaternaryEnhancedId": "M.G3.C1OA.TC.xyz",
+    "secondaryEnhancedId": "M.G3.C4OA.TB.xyz",
+    "tertiaryEnhancedId": "M.G3.C3O.TB.xyz",
+    "type": "sa",
+    "version": ""
+  },
+
   "textToSpeech" : {
 
     "isVisualTTSRequired" : "undetermined",
