@@ -33,3 +33,13 @@ IMRT logs item related events as it ingests and monitors items.  These are all l
 | ITEM_CREATED | This means the item is created within the IMRT system. |
 | ITEM_UPDATED | This is similar to created and means the item has been updated with the latest data |
 | ITEM_DELETED | This means the item has been deleted from the itembank and deleted from IMRT |
+
+## IMRT Sync Job Logging
+
+IMRT logs additional information when running the sync job.  All those messages are at IMRT_INFO level with the prefix `Sync-Item-Job:`
+
+The example log below is tracking how long it takes to get a list of items from Gitlab.
+
+```
+INFO 1 --- [cTaskExecutor-1] a.i.i.s.i.ItemSynchronizationServiceImpl : IMRT_INFO: Sync-Item-Job: Get page 364 from gitlab in 868 ms
+```
