@@ -35,6 +35,7 @@ IMRT Ingest is tightly integrated with the [Item Search Service](https://github.
 * [Delete an Item](docs/delete-item.md)
 * [Running and Monitoring the Item Synchronization Process](docs/exec-item-sync.md)
 * [Running and Monitoring the Item Data Migration Process](docs/exec-item-migration.md)
+* [Monitoring Sync/Ingest Process](docs/montitor_ingest.md)
 
 ### Troubleshooting
 * [Items aren't syncing](docs/items_are_not_syncing.md)
