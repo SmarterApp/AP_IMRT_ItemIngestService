@@ -4,11 +4,13 @@ management:
   security:
     enabled: "false"
 
+
 spring:
   autoconfigure:
     exclude:
       - org.springframework.boot.autoconfigure.session.SessionAutoConfiguration
   jpa:
+    show-sql: true
     hibernate:
       ddl-auto: validate
     database-platform: org.hibernate.dialect.PostgreSQLDialect
@@ -48,5 +50,5 @@ spring:
 logging:
   config: classpath:log4j2-local.xml
 iis:
-  ignore-validate: true
+  ignore-validate: false
   ignore-webhook-creation: true
