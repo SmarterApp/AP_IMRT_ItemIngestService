@@ -52,3 +52,4 @@ logging:
 iis:
   ignore-validate: false
   ignore-webhook-creation: true
+  validationQueueConcurrentConsumers: 2
