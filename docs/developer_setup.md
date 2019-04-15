@@ -1,10 +1,14 @@
-# Initial Developer Configuration
+# Developer Notes
 
 ## Getting Started
 
 This project requires certain pieces of software to run. Below is hte list and recommended order to install those pieces of software.  
 
 * [Getting Started For Mac](getting_started_mac.md)
+
+## Other helpful notes
+
+* [TIMS & IMRT Integration local dev](TIMS_IMRT_LocalDev.md)
 
 ## Create database and users
 
@@ -149,18 +153,20 @@ mkdir -p ~/sbac/
 git clone https://gitlab.com/fairwaytech/imrt-config-repo.git
 </pre>
 
-# Command Line Execution
+## Command Line Execution
 
 The easiest way to test changes to IIS via the command line is to first use docker-compose to bring up all the containers.
 Now use docker stop to kill off IIS. Make sure you have all the required environment variables as described above,
 and then run 
 <pre>./gradlew bootRun</pre>
 
-# Running within an IDE
+## Running within an IDE
 
 To execute unit tests within an IDE, make sure that an appropriate SPRING_DATASOURCE_USERNAME and SPRING_DATASOURCE_PASSWORD are configured.
 
 To execute IIS from with an IDE, make sure both the datasource and gitlab environment variables are set.
+
+
 
 
 
