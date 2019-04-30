@@ -30,6 +30,7 @@ iis:
   retry-amount: 3
   imrt-page-query-limit: 1000
   item-validation-service-url: "http://localhost:8087"
+  item-management-service-url: "http://localhost:8081"
 
 itembank:
   host: "${GITLAB_HOST:https://gitlab-dev.smarterbalanced.org}"
@@ -41,6 +42,12 @@ itembank:
   projects-per-page: 50
   delete-item-git-page-size: 50
   delete-sync-disabled: false
+  events:
+    exchange: "iat_item_event_exchange"
+    queue:
+      queueName: "imrt_item_event_queue"
+    errorQueue:
+      queueName: "imrt_item_event_queue.dlq"
 
 server:
   port: ${IMRT_IIS_SERVER_PORT:9081}
