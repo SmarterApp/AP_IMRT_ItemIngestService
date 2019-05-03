@@ -42,6 +42,9 @@ itembank:
   projects-per-page: 50
   delete-item-git-page-size: 50
   delete-sync-disabled: false
+  enabled:
+    broker: true
+    consumer: true
   events:
     exchange: "iat_item_event_exchange"
     queue:
