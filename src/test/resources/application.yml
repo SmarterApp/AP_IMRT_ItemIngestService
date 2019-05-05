@@ -16,3 +16,7 @@ spring:
 
 itembank:
   host: "http://gitlab-example.com"
+  tims:
+    exchange: "iat_item_event_exchange"
+    queue: "imrt_item_event_queue"
+    eventKey: "imrt.item.event.*"
