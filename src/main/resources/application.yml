@@ -6,6 +6,8 @@ management:
 
 
 spring:
+  freemarker:
+    checkTemplateLocation=false:
   autoconfigure:
     exclude:
       - org.springframework.boot.autoconfigure.session.SessionAutoConfiguration
@@ -42,13 +44,10 @@ itembank:
   projects-per-page: 50
   delete-item-git-page-size: 50
   delete-sync-disabled: false
-  enabled:
-    broker: true
-    consumer: true
   tims:
     exchange: "iat_item_event_exchange"
     queue: "imrt_item_event_queue"
-    eventKey: "imrt.item.event.*"
+    eventKey: "iat.item.event.*"
 
 server:
   port: ${IMRT_IIS_SERVER_PORT:9081}
