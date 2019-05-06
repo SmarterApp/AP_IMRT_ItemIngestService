@@ -47,7 +47,7 @@ itembank:
   tims:
     exchange: "iat_item_event_exchange"
     queue: "imrt_item_event_queue"
-    eventKey: "imrt.item.event.*"
+    eventKey: "iat.item.event.*"
 
 server:
   port: ${IMRT_IIS_SERVER_PORT:9081}
