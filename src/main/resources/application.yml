@@ -57,6 +57,6 @@ spring:
 logging:
   config: classpath:log4j2-local.xml
 iis:
-  ignore-validate: true
+  ignore-validate: false
   ignore-webhook-creation: true
   validationQueueConcurrentConsumers: 2
