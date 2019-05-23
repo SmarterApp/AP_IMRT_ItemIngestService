@@ -285,6 +285,33 @@ task kopsUpdateDeployment(type: Exec) {
     args = ['patch', 'deployment', 'ap-imrt-iis-deployment', '-p', String.format("{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"date\":\"%s\"}}}}}", new Date().getTime())]
 }
 
+
+task k8sCopyFiles(type: Copy) {
+
+    from('src/main/kubernetes/') {
+        filter(ReplaceTokens, tokens: [version              : project.version,
+                                       dockerTagBase        : project.dockerTagBase,
+                                       kubecfgState         : project.kubecfgState,
+                                       kubecfgName          : project.kubecfgName,
+                                       kubecfgDeployment    : project.kubecfgDeployment])
+    }
+
+    into 'build/kubernetes'
+}
+
+task k8sCopyFilesUat(type: Copy) {
+
+    from('src/main/kubernetes/') {
+        filter(ReplaceTokens, tokens: [version              : project.version,
+                                       dockerTagBase        : project.dockerTagBase,
+                                       kubecfgState         : project.kubecfgState,
+                                       kubecfgName          : project.kubecfgNameUat,
+                                       kubecfgDeployment    : project.kubecfgDeployment])
+    }
+
+    into 'build/kubernetes'
+}
+
 /**
  * Save the current build.gradle and gradle.properties file to the build directory.
  * This will be used during release builds to save the release revision, which is
