@@ -30,7 +30,7 @@ logging:
 
 iis:
   retry-amount: 3
-  imrt-page-query-limit: 1000
+  imrt-page-query-limit: 10
   item-validation-service-url: "http://localhost:8087"
   item-management-service-url: "http://localhost:8081"
 
