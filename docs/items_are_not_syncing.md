@@ -23,6 +23,14 @@ The following are good steps to follow
 	* The errors may indicate why the item isn't syncing properly
 2. Check if the sync job is running properly
 
+### Log messages when a job is hung
+When one tries to start a job that is already running you will see the following error:
+```
+2019-06-15 04:00:08.461 ERROR 5 --- [nio-9081-exec-8] o.o.a.i.i.c.GlobalExceptionHandler       : IMRT_ERROR: A job is already running
+org.springframework.batch.core.repository.JobExecutionAlreadyRunningException: A job execution for this job is already running: JobInstance: id=1, version=0, Job=[itemSynchronizationJob]```
+
+This means that either the nightly sync job has already started or that the previous job failed for an unknown reason.  This should be investigated to determine the cause of the failure.  To restart the job you will need to abandon the job.
+
 ## Check if the sync job is running properly
 
 **NOTE:** This section assumes you have verified the cron job is running in the Kubernetes environment or the cron job you created yourself is functioning as expected.  Recommend not modifying any jobs less that 24 hours old to make sure you're not impacting a running job.
