@@ -27,7 +27,8 @@ The following are good steps to follow
 When one tries to start a job that is already running you will see the following error:
 ```
 2019-06-15 04:00:08.461 ERROR 5 --- [nio-9081-exec-8] o.o.a.i.i.c.GlobalExceptionHandler       : IMRT_ERROR: A job is already running
-org.springframework.batch.core.repository.JobExecutionAlreadyRunningException: A job execution for this job is already running: JobInstance: id=1, version=0, Job=[itemSynchronizationJob]```
+org.springframework.batch.core.repository.JobExecutionAlreadyRunningException: A job execution for this job is already running: JobInstance: id=1, version=0, Job=[itemSynchronizationJob]
+```
 
 This means that either the nightly sync job has already started or that the previous job failed for an unknown reason.  This should be investigated to determine the cause of the failure.  To restart the job you will need to abandon the job.
 
