@@ -59,4 +59,5 @@ logging:
 iis:
   ignore-validate: false
   ignore-webhook-creation: true
-  validationQueueConcurrentConsumers: 2
+  validation-queue-concurrent-consumers: 2
+  sync-job-item-sync-concurrent-consumers: 2
