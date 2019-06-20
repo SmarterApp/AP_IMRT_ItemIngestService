@@ -23,9 +23,9 @@ During a time where a lot of changes are being ingested one can monitor the Rabb
 
 | Queue Name | Description |
 | ---------- | ----------- |
-| `imrt-update` | This is the ingest queue.  Each time an item is changed an update event message is placed, and the changes are ingested |
-| `imrt-delete` | This is the discard queue.  When users discard an item or an administrator deletes an item from the itembank a delete event is placed on this queue for the item deleted. |
-| `imrt-error` | This is a dead letter queue.  Any message that cannot be processed or errors are placed on this queue and logged. |
+| `item-update` | This is the ingest queue.  Each time an item is changed an update event message is placed, and the changes are ingested |
+| `item-delete` | This is the discard queue.  When users discard an item or an administrator deletes an item from the itembank a delete event is placed on this queue for the item deleted. |
+| `item-error` | This is a dead letter queue.  Any message that cannot be processed or errors are placed on this queue and logged. |
 
 
 #### Steps to Track Ingest Processing
