@@ -12,3 +12,9 @@ spring:
         max-attempts: ${CS_RETRY_MAX_ATTEMPTS:25}
         max-interval: ${CS_RETRY_MAX_INTERVAL:4000}
         multiplier: ${CS_RETRY_MULTIPLIER:1.2}
+
+---
+spring:
+  profiles: local-development
+logging:
+  config: classpath:log4j2-local.xml
