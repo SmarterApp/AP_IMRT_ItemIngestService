@@ -23,7 +23,7 @@ validation-result:
   
   delete: >-
     DELETE FROM validation_result
-    WHERE key IN (:key)
+    WHERE key IN (:keys)
 
   deleteAllByItemKey: >-
     DELETE FROM validation_result
