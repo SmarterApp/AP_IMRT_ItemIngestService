@@ -18,6 +18,8 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
   datasource:
     url: "jdbc:postgresql://localhost:5432/imrt"
+    username: ${IMRT_DB_USER}
+    password: ${IMRT_DB_PASSWORD}
   batch:
     job:
       enabled: false # Prevent Spring from starting jobs on startup.
