@@ -1,0 +1,30 @@
+validation-result:
+  create: >-
+    INSERT INTO validation_result (item_key, validation_item_id, validation_item_type, category, severity, message, detail, created_at, updated_by, updated_at)
+    VALUES
+      (:item_key, :validation_item_id, :validation_item_type, :category, :severity, :message, :detail, current_timestamp, :updated_by, current_timestamp)
+
+  find: >-
+    SELECT
+      key,
+      item_key,
+      validation_item_id,
+      validation_item_type,
+      category,
+      severity,
+      message,
+      detail,
+      created_at,
+      updated_by,
+      updated_at
+    FROM validation_result
+    WHERE item_key = (SELECT key from item where id = :item_id)
+    ORDER BY key DESC
+  
+  delete: >-
+    DELETE FROM validation_result
+    WHERE key IN (:keys)
+
+  deleteAllByItemKey: >-
+    DELETE FROM validation_result
+    WHERE item_key = :item_key

@@ -249,16 +249,19 @@ task dockerCopyFiles(type: Copy) {
 task dockerBuildImage(type: DockerBuildImage) {
     dependsOn 'dockerCopyFiles'
     inputDir = project.file('build/docker/')
-    tag = "${dockerTagBase}/${jar.baseName}:${version}"
+    def name = "${dockerTagBase}/${jar.baseName}" + (project.version.contains('-SNAPSHOT') ? "": ":${project.version}")
+    tags.add(name.toString())
 }
 
 task dockerPushImage(type: DockerPushImage) {
     dependsOn 'dockerBuildImage'
-    imageName = "${dockerTagBase}/${jar.baseName}:${version}"
+    def name = "${dockerTagBase}/${jar.baseName}" + (project.version.contains('-SNAPSHOT') ? "": ":${project.version}")
+    imageName = name.toString()
 }
 
 task dockerRemoveImage(type: DockerRemoveImage) {
-    imageId = "${project.dockerTagBase}/${jar.baseName}:${project.version}"
+    def name = "${dockerTagBase}/${project.name}" + (project.version.contains('-SNAPSHOT') ? "": ":${project.version}")
+    imageId = name.toString()
 }
 
 /**
