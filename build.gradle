@@ -41,10 +41,6 @@ targetCompatibility = 1.8
 configurations {
     // Exclude logback, we will use log4j
     compile.exclude module: 'spring-boot-starter-logging'
-    // This is pulled in from ap-common, we don't want security
-    // on our endpoints, at least for now
-    compile.exclude module: 'spring-boot-starter-security'
-
     // Avoid having to list the findbugs annotations twice
     testCompile.extendsFrom compileOnly
 }
@@ -55,6 +51,7 @@ dependencies {
     compileOnly 'com.google.code.findbugs:annotations:3.0.1'
     compile 'org.hibernate:hibernate-java8:5.0.12.Final'
     compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-security'
     compile 'org.springframework.boot:spring-boot-starter-actuator'
     compile 'org.springframework.cloud:spring-cloud-starter-config'
     compile 'org.springframework.boot:spring-boot-starter-aop'
