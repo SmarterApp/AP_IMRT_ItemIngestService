@@ -64,7 +64,7 @@ dependencies {
     compile 'org.postgresql:postgresql:42.2.1'
     // Type mappings for hibernate -> PostgreSQL Json
     compile 'biz.paluch.logging:logstash-gelf:1.12.0'
-    compile 'com.vladmihalcea:hibernate-types-5:2.0.0'
+    compile 'com.vladmihalcea:hibernate-types-5:2.2.0'
     compile 'com.fasterxml.jackson.datatype:jackson-datatype-jdk8'
     compile 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
     testCompile 'org.springframework.boot:spring-boot-starter-test'
