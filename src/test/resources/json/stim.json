@@ -64,6 +64,8 @@
 
       "passageName" : "",
 
+      "pencilPaper" : "Yes",
+
       "performanceTask" : "",
 
       "primaryAssessmentTarget" : "",
@@ -97,6 +99,10 @@
       "secondaryCommonCoreStandard" : "",
 
       "secondaryContentDomain" : "",
+
+      "stateSpecificUse" : "No",
+
+      "stateSpecificUseDescription" : "No description",
 
       "stimulusFormat" : "",
 
