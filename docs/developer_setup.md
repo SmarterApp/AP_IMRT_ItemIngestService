@@ -12,28 +12,13 @@ This project requires certain pieces of software to run. Below is hte list and r
 
 ## Create database and users
 
-Connect into PostgreSQL using the psql command line tool. You will need to initially connect using the 'postgres' user, password is whatever you set it to during the install. 
+Two databases are required for IMRT
 
-Once you connect, you will need to create some new users, for example one admin user, one for iis, 
-and one for running the tests, . You can set the passwords to whatever you like:
+* test - test db used in integration tests
+* imrt - main application db
 
-<pre>
-psql -U postgres
-CREATE ROLE "imrt_admin" with LOGIN SUPERUSER CREATEDB CREATEROLE PASSWORD '<choose password>';
-CREATE ROLE "imrt_ingest" with LOGIN PASSWORD '<choose password>';
-CREATE ROLE "test" with LOGIN SUPERUSER PASSWORD '<choose password>';
-</pre>
+Setting up the databases is documented in the [IMRT_Schema](https://github.com/SmarterApp/AP_IMRT_Schema) project.
 
-Now log back in the with the user you just created, and create the databases:
-
-<pre>
-psql -U imrt_admin postgres
-create database "imrt";
-create database "test";
-</pre>
-
-From this point on, if you use psql, you will want to login with:
-<pre>psql -U imrt_admin imrt</pre> to be connected to the imrt database
 
 ## Configure global Gradle properties
 
@@ -62,18 +47,6 @@ flyway.user=<user>
 flyway.password=<password>
 flyway.url=<url> # Sample URL for local database named imrt: jdbc:postgresql://localhost:5432/imrt
 ```
-
-## Create database tables
-
-Clone the AP_IMRT_Schema project from https://github.com/SmarterApp/AP_IMRT_Schema. 
-
-Make sure you populate both the imrt and the test database:
-
-<pre>
-./gradlew -Pflyway.user=test -Pflyway.password=<password> -Pflyway.url=jdbc:postgresql://localhost:5432/test flywayMigrate
-./gradlew -Pflyway.user=imrt_admin -Pflyway.password=<password> -Pflyway.url=jdbc:postgresql://localhost:5432/imrt flywayMigrate
-</pre>
-
 
 ## Building with Gradle
 
