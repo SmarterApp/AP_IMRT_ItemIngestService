@@ -1,3 +1,6 @@
+# !!! IMPORTANT !!! - Archived
+This project has been archived and is no longer actively maintained.  All code has been migrated to the [TIMS project](https://github.com/SmarterApp/TIMS).
+
 # Item Ingest Service (IMRT)
 
 This project handles ingesting data from the item bank into the IMRT search database.  It handles capturing and deriving data which can be searched on within the [Item Authoring Tool](https://github.com/SmarterApp/AP_ItemAuthoringTool).  This readme contains the necessary information to develop, deploy, and maintain the application.

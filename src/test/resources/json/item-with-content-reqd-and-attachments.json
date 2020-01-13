@@ -207,6 +207,10 @@
 
       "specificationVersion" : "tess",
 
+      "stateSpecificUse" : "No",
+
+      "stateSpecificUseDescription" : "No description",
+
       "stimulusFormat" : "Standard",
 
       "stimulusGenre" : "Information - Argument/opinion",

@@ -41,10 +41,6 @@ targetCompatibility = 1.8
 configurations {
     // Exclude logback, we will use log4j
     compile.exclude module: 'spring-boot-starter-logging'
-    // This is pulled in from ap-common, we don't want security
-    // on our endpoints, at least for now
-    compile.exclude module: 'spring-boot-starter-security'
-
     // Avoid having to list the findbugs annotations twice
     testCompile.extendsFrom compileOnly
 }
@@ -55,6 +51,7 @@ dependencies {
     compileOnly 'com.google.code.findbugs:annotations:3.0.1'
     compile 'org.hibernate:hibernate-java8:5.0.12.Final'
     compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-security'
     compile 'org.springframework.boot:spring-boot-starter-actuator'
     compile 'org.springframework.cloud:spring-cloud-starter-config'
     compile 'org.springframework.boot:spring-boot-starter-aop'
@@ -67,7 +64,7 @@ dependencies {
     compile 'org.postgresql:postgresql:42.2.1'
     // Type mappings for hibernate -> PostgreSQL Json
     compile 'biz.paluch.logging:logstash-gelf:1.12.0'
-    compile 'com.vladmihalcea:hibernate-types-5:2.0.0'
+    compile 'com.vladmihalcea:hibernate-types-5:2.2.0'
     compile 'com.fasterxml.jackson.datatype:jackson-datatype-jdk8'
     compile 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
     testCompile 'org.springframework.boot:spring-boot-starter-test'
@@ -249,16 +246,19 @@ task dockerCopyFiles(type: Copy) {
 task dockerBuildImage(type: DockerBuildImage) {
     dependsOn 'dockerCopyFiles'
     inputDir = project.file('build/docker/')
-    tag = "${dockerTagBase}/${jar.baseName}:${version}"
+    def name = "${dockerTagBase}/${jar.baseName}" + (project.version.contains('-SNAPSHOT') ? "": ":${project.version}")
+    tags.add(name.toString())
 }
 
 task dockerPushImage(type: DockerPushImage) {
     dependsOn 'dockerBuildImage'
-    imageName = "${dockerTagBase}/${jar.baseName}:${version}"
+    def name = "${dockerTagBase}/${jar.baseName}" + (project.version.contains('-SNAPSHOT') ? "": ":${project.version}")
+    imageName = name.toString()
 }
 
 task dockerRemoveImage(type: DockerRemoveImage) {
-    imageId = "${project.dockerTagBase}/${jar.baseName}:${project.version}"
+    def name = "${dockerTagBase}/${project.name}" + (project.version.contains('-SNAPSHOT') ? "": ":${project.version}")
+    imageId = name.toString()
 }
 
 /**
